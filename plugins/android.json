@@ -23,6 +23,14 @@
                         {
                             "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -50,7 +58,19 @@
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
                             "count": 1
                         }
-                    ]
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "application": []
+                }
+            },
+            "res/values/facebookconnect.xml": {
+                "parents": {
+                    "/*": []
                 }
             }
         }
@@ -63,6 +83,12 @@
             "PACKAGE_NAME": "com.asiseviaja"
         },
         "org.apache.cordova.media": {
+            "PACKAGE_NAME": "com.asiseviaja"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.asiseviaja"
+        },
+        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.asiseviaja"
         }
     },

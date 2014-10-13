@@ -92,6 +92,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -244,6 +258,8 @@ module.exports.metadata =
     "org.apache.cordova.camera": "0.3.4-dev",
     "org.apache.cordova.media-capture": "0.3.5-dev",
     "org.apache.cordova.media": "0.2.15-dev",
+    "org.apache.cordova.inappbrowser": "0.5.2",
+    "nl.x-services.plugins.socialsharing": "4.3.8",
     "org.apache.cordova.file": "1.3.1"
 }
 // BOTTOM OF METADATA

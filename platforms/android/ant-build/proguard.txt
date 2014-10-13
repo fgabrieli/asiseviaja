@@ -1,3 +1,6 @@
 # view AndroidManifest.xml #generated:6
 -keep class com.asiseviaja.AsiSeViaja { <init>(...); }
 
+# view res/layout/com_facebook_usersettingsfragment.xml #generated:48
+-keep class com.facebook.widget.LoginButton { <init>(...); }
+
