@@ -12,9 +12,6 @@
 <!-- Css Stylesheets -->
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" href="css/picture.css" />
-
-<link rel="stylesheet" type="text/css" href="js/libs/propietary/jquery.pconsole/css/jquery.pconsole.css" />
-
 </head>
 <body data-ng-app="asiApp">
   <h1>Asi se viaja :S</h1>
@@ -22,40 +19,29 @@
   <div id="pictures" data-ng-controller="asi.Picture.ngController">
     <div class="picture" data-ng-repeat="picture in pictures">
       <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption"> {{picture.caption}} </span>
-      <button style="width: 200px; height: 200px" data-ng-click="launchCamera()">Launch camera!</button>
-      <button style="width: 200px; height: 200px" data-ng-click="shareOnFacebook()">Share on Facebook</button>
-      <button style="width: 200px; height: 200px" data-ng-click="shareOnTwitter()">Share on Twitter</button>
+      <button style="width: 100px; height: 50px" data-ng-click="share(picture)">Share</button>
     </div>
+
+    <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take a picture!</button>
   </div>
 
-  <!-- Javascript includes -->
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/libs/angular/1.2.26/angular.min.js"></script>
 
-  <script type="text/javascript" src="js/libs/propietary/jquery.pconsole/jquery.pconsole.js"></script>
+  <!-- App initialization -->
+  <script type="text/javascript" src="js/App.js"></script>
 
+  <!-- Libraries -->
+  <script type="text/javascript" src="js/libs/propietary/event/1.0/Event.js"></script>
   <script type="text/javascript" src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
-  <script type="text/javascript">
-      // Shortcut to pConsole lib
-      var _pc = pConsole;
-
-      // Initialize angular app
-      var asiApp = angular.module('asiApp', []);
-
-      var asi = {};
-
-      app.initialize();
-    </script>
-
-
-  <!-- Javascript files -->
   <script type="text/javascript" src="cordova.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-
+  <!--   <script type="text/javascript" src="js/index.js"></script> -->
 
   <!-- Modules -->
+  <script type="text/javascript" src="js/modules/Config.js"></script>
   <script type="text/javascript" src="js/modules/Picture.js"></script>
+  <script type="text/javascript" src="js/modules/Share.js"></script>
 
 </body>
 </html>
