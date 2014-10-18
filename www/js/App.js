@@ -1,8 +1,3 @@
-// Initialize angular app
-var asiApp = angular.module('asiApp', []);
-
-var asi = {};
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -52,5 +47,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-app.initialize();
