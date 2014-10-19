@@ -18,30 +18,42 @@
 
   <div id="pictures" data-ng-controller="asi.Picture.ngController">
     <div class="picture" data-ng-repeat="picture in pictures">
-      <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption"> {{picture.caption}} </span>
+      <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption">
+        {{picture.caption}} </span>
       <button style="width: 100px; height: 50px" data-ng-click="share(picture)">Share</button>
     </div>
 
-    <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take a picture!</button>
+    <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take
+      a picture!</button>
   </div>
 
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/libs/angular/1.2.26/angular.min.js"></script>
+  <script type="text/javascript" src="js/libs/json2/1.0/json2.min.js"></script>
 
   <!-- App initialization -->
-  <script type="text/javascript" src="js/App.js"></script>
+  <script type="text/javascript">
+      // Initialize angular app
+      var asiApp = angular.module('asiApp', []);
+
+      var asi = {};
+    </script>
 
   <!-- Libraries -->
   <script type="text/javascript" src="js/libs/propietary/event/1.0/Event.js"></script>
-  <script type="text/javascript" src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
   <script type="text/javascript" src="cordova.js"></script>
-  <!--   <script type="text/javascript" src="js/index.js"></script> -->
+
+  <script type="text/javascript" src="js/index.js"></script>
 
   <!-- Modules -->
+  <script type="text/javascript" src="js/modules/Log.js"></script>
   <script type="text/javascript" src="js/modules/Config.js"></script>
   <script type="text/javascript" src="js/modules/Picture.js"></script>
   <script type="text/javascript" src="js/modules/Share.js"></script>
+
+  <script type="text/javascript"
+    src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
 </body>
 </html>

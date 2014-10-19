@@ -1,7 +1,8 @@
 asi.Config = {
   events : {
     takePicture : 'TakePicture',
-    pictureTaken : 'PictureTaken'
+    pictureTaken : 'PictureTaken',
+    share : 'Share'
   }
 };
 

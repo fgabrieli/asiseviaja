@@ -1,12 +1,14 @@
 asi.Picture = {
   init : function() {
     var t = asi.Picture;
-    
-    Event.bind('takePicture', function() {
+
+    Event.bind(asi.evt.takePicture, function() {
       t.takePicture();
-    })
+    });
   },
   takePicture : function() {
+    asi.Log('takePicture');
+
     var onSuccess = function(imageURI) {
       Event.fire(asi.evt.pictureTaken, {
         imageURI : imageURI
@@ -15,7 +17,9 @@ asi.Picture = {
 
     var onFail = function(message) {
       console.log("$scope.takePicture() failed, error message: ", message);
-    }
+    };
+
+    asi.Log('navigator.camera.getPicture()');
 
     navigator.camera.getPicture(onSuccess, onFail, {
       quality : 50,
@@ -23,11 +27,11 @@ asi.Picture = {
       correctOrientation : true,
       targetWidth : '1024'
     });
-  }
+  },
   getPictures : function() {
     // Retrieve images
     return [ {
-      imageUrl : 'img/test.jpg',
+      imageUrl : 'www/img/test.jpg',
       caption : 'This is a good image'
     } ];
   },
@@ -39,8 +43,22 @@ asi.Picture = {
     /**
      * Take a new picture.
      */
-    $scope.takePicture = function() {
+    $scope.takeAPicture = function() {
+      asi.Log('$scope.takeAPicture()');
       Event.fire(asi.evt.takePicture);
-    }
+    };
+
+    $scope.share = function(picture) {
+      asi.Log('$scope.share: ', picture);
+
+      Event.fire(asi.evt.share, {
+        message : picture.caption,
+        image : picture.imageUrl
+      });
+    };
   }
-}
+};
+
+$(document).ready(function() {
+  asi.Picture.init();
+});

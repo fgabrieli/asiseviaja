@@ -7,14 +7,14 @@ asi.Upload = {
       console.log('Code = ' + r.responseCode);
       console.log('Response = ' + r.response);
       console.log('Sent = ' + r.bytesSent);
-    }
+    };
 
     var onError = function(error) {
       console.log(error);
       // alert('An error has occurred: Code = ' + error.code);
       // console.log('upload error source ' + error.source);
       // console.log('upload error target ' + error.target);
-    }
+    };
 
     var options = new FileUploadOptions();
     options.fileKey = 'file';
@@ -30,4 +30,4 @@ asi.Upload = {
     var ft = new FileTransfer();
     ft.upload(fileUrl, encodeURI(t.SERVER_URL), onSuccess, onError, options);
   }
-}
+};
