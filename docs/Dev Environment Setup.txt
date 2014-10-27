@@ -1,0 +1,22 @@
+Environment setup for Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1) 
+
+In /<path>/<to>/asiseviaja, execute: 
+
+$ scripts\docs\create-dev-env.bat
+
+2) 
+
+$ cordova build
+
+3) 
+
+Connect your device to the USB port
+
+$ adb devices
+
+4) 
+
+$ cordova run
