@@ -11,7 +11,7 @@ asi.Picture = {
 
     var onSuccess = function(imageURI) {
       Event.fire(asi.evt.pictureTaken, {
-        imageURI : imageURI
+        imageUri : imageURI
       });
     };
 
@@ -24,6 +24,7 @@ asi.Picture = {
     navigator.camera.getPicture(onSuccess, onFail, {
       quality : 50,
       destinationType : Camera.DestinationType.FILE_URI,
+      sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
       correctOrientation : true,
       targetWidth : '1024'
     });
@@ -43,7 +44,7 @@ asi.Picture = {
     /**
      * Take a new picture.
      */
-    $scope.takeAPicture = function() {
+    $scope.takePicture = function() {
       asi.Log('$scope.takeAPicture()');
       Event.fire(asi.evt.takePicture);
     };
@@ -55,6 +56,10 @@ asi.Picture = {
         message : picture.caption,
         image : picture.imageUrl
       });
+    };
+
+    $scope.uploadPicture = function() {
+      asi.Upload.uploadImage('www/img/test.jpg');
     };
   }
 };

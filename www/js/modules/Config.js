@@ -2,7 +2,8 @@ asi.Config = {
   events : {
     takePicture : 'TakePicture',
     pictureTaken : 'PictureTaken',
-    share : 'Share'
+    share : 'Share',
+    aboutUs : 'AboutUs'
   }
 };
 

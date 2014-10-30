@@ -7,25 +7,88 @@
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 <meta name="viewport"
   content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<title>Asi se viaja :S</title>
+
+<title>Asi se viaja!</title>
 
 <!-- Css Stylesheets -->
-<link rel="stylesheet" type="text/css" href="css/main.css" />
+<!-- <link rel="stylesheet" type="text/css" href="css/main.css" /> -->
+<link href="css/app.css" type="text/css" rel="stylesheet" />
+<link href="css/about-us-modal.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/picture.css" />
 </head>
-<body data-ng-app="asiApp">
-  <h1>Asi se viaja :S</h1>
 
-  <div id="pictures" data-ng-controller="asi.Picture.ngController">
-    <div class="picture" data-ng-repeat="picture in pictures">
-      <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption">
-        {{picture.caption}} </span>
-      <button style="width: 100px; height: 50px" data-ng-click="share(picture)">Share</button>
+<body data-ng-app="asiApp" class="clearfix">
+  <!--   <h1>Asi se viaja :S</h1> -->
+
+  <!--   <div id="pictures" data-ng-controller="asi.Picture.ngController"> -->
+  <!--     <div class="picture" data-ng-repeat="picture in pictures"> -->
+  <!--       <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption"> -->
+  <!--         {{picture.caption}} </span> -->
+  <!--       <button style="width: 100px; height: 50px" data-ng-click="share(picture)">Share</button> -->
+  <!--     </div> -->
+
+  <!--     <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take -->
+  <!--       a picture!</button> -->
+  <!--   </div> -->
+
+  <div id="container">
+
+    <!-- Top menu -->
+
+    <div id="topmenu" data-ng-controller="asi.TopMenu.ngController">
+      <div id="gray-bar" class="clearfix">
+        <div id="btn-home"></div>
+        <ul id="btn-container" class="clearfix">
+          <li class="btn-header"><a data-ng-click="share()"> <img
+              src="img/share.png" width="60" height="60" />
+          </a></li>
+          <li class="btn-header"><a data-ng-click="aboutUs()"> <img
+              src="img/about.png" width="60" height="60" />
+          </a></li>
+        </ul>
+      </div>
+      <h1>ASI SE VIAJA</h1>
     </div>
 
-    <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take
-      a picture!</button>
+    <div id="pictures" class="clearfix"
+      data-ng-controller="asi.Picture.ngController">
+      
+      <a data-ng-click="uploadPicture()" style="cursor: pointer">Upload!</a>
+
+      <!-- List of pictures -->
+
+      <div id="left-col">
+        <div class="img-container">
+          <img src="app-pic/1.jpg" alt="" />
+          <p class="caption">Lorem ipsum dolor...</p>
+        </div>
+      </div>
+
+      <div id="right-col">
+        <div class="img-container">
+          <img src="app-pic/2.jpg" alt="" />
+          <p class="caption">Lorem ipsum dolor...</p>
+        </div>
+      </div>
+
+      <!-- Take a new picture -->
+
+      <div id="btn-shot">
+        <a data-ng-click="takePicture()"><img src="img/shot.png" /></a>
+      </div>
+    </div>
   </div>
+
+  <!-- Modals -->
+
+  <div id="about-us-modal" data-ng-controller="asi.AboutUsModal.ngController"
+    data-ng-show="isVisible">
+    (to be) || !(to be)
+
+    <p>Hey man!</p>
+  </div>
+
+  <!-- External Libs -->
 
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/libs/angular/1.2.26/angular.min.js"></script>
@@ -51,9 +114,14 @@
   <script type="text/javascript" src="js/modules/Config.js"></script>
   <script type="text/javascript" src="js/modules/Picture.js"></script>
   <script type="text/javascript" src="js/modules/Share.js"></script>
+  <script type="text/javascript" src="js/modules/TopMenu.js"></script>
+  <script type="text/javascript" src="js/modules/AboutUsModal.js"></script>
+  <script type="text/javascript" src="js/modules/Upload.js"></script>
 
   <script type="text/javascript"
     src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
+
 </body>
+
 </html>

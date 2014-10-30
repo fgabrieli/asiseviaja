@@ -1,33 +1,45 @@
 asi.Upload = {
-  SERVER_URL : 'http://192.168.210.100/server/upload_picture.php',
-  upload : function(file) {
+  init : function() {
     var t = asi.Upload;
-
-    var onSuccess = function(fileUrl) {
-      console.log('Code = ' + r.responseCode);
-      console.log('Response = ' + r.response);
-      console.log('Sent = ' + r.bytesSent);
-    };
-
-    var onError = function(error) {
-      console.log(error);
-      // alert('An error has occurred: Code = ' + error.code);
-      // console.log('upload error source ' + error.source);
-      // console.log('upload error target ' + error.target);
-    };
-
+    Event.bind(asi.evt.pictureTaken, function(data) {
+      asi.Log('asi.Upload: catched asi.evt.pictureTaken for: ', data.imageUri);
+      t.uploadImage(data.imageUri);
+    });
+  },
+  uploadImage : function(imageUri) {
     var options = new FileUploadOptions();
-    options.fileKey = 'file';
-    options.fileName = fileUrl.substr(fileUrl.lastIndexOf('/') + 1);
-    options.mimeType = 'image/jpeg';
+    options.fileKey = "file";
+    options.fileName = imageUri.substr(imageUri.lastIndexOf('/') + 1);
+    asi.Log('fileName=', options.fileName);
+    options.mimeType = "image/jpeg";
 
-    var params = {};
-    params.value1 = 'test';
-    params.value2 = 'param';
+    // var params = new Object();
+    //
+    // params.value1 = "test";
+    // params.value2 = "param";
+    //
+    // options.params = params;
+    
+    options.chunkedMode = false;
 
-    options.params = params;
+    function onSuccess(r) {
+      asi.Log("Code = " + r.responseCode);
+      asi.Log("Response = " + r.response);
+      asi.Log("Sent = " + r.bytesSent);
+    }
+    ;
+
+    function onError(error) {
+      asi.Log("An error has occurred: Code = ", error.code);
+    }
+    ;
 
     var ft = new FileTransfer();
-    ft.upload(fileUrl, encodeURI(t.SERVER_URL), onSuccess, onError, options);
+    ft.upload(imageUri, "http://192.168.210.100/asiserver/upload_picture.php", onSuccess, onError,
+        options);
   }
 };
+
+$(document).ready(function() {
+  asi.Upload.init();
+});

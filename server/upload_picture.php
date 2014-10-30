@@ -1,24 +1,18 @@
-<pre>
 <?php
-print_r($_FILES);
-function receive() {
-	$fileReader = fopen('php://input', 'r');
-	$fileWriter = fopen('images/test.jpg', 'w+');
 
-	while(true) {
-		$buffer = fgets($fileReader, 4096);
-		if (strlen($buffer) == 0) {
-			fclose($fileReader);
-			fclose($fileWriter);
-			return true;
-		}
+// Receive picture from user's device
 
-		fwrite($fileWriter, $buffer);
-	}
+define('UPLOAD_DIRECTORY', 'c:/home/asiseviaja/server/upload/');
 
-	return false;
+if (!empty($_FILES)) {
+
+  // Create a unique name
+  
+  $randomNumber = mktime() . '-' . rand(1, 1000000);
+  $imageName = 'picture-' . $randomNumber . '.jpg';
+  
+  // Move the uploaded picture to the pictures directory
+  
+  move_uploaded_file($_FILES["file"]["tmp_name"], UPLOAD_DIRECTORY . $imageName);
 }
-
-receive();
 ?>
-</pre>
