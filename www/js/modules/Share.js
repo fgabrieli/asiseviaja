@@ -7,7 +7,7 @@ asi.Share = {
 
     // Sharing is handled as an event
 
-    Event.bind(asi.evt.share, this.share);
+    Event.bind(asi.evt.share, 'ShareModule', this.share);
   },
   share : function(data) {
     if (typeof data.message == 'undefined') {

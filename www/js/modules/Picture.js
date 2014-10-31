@@ -2,7 +2,7 @@ asi.Picture = {
   init : function() {
     var t = asi.Picture;
 
-    Event.bind(asi.evt.takePicture, function() {
+    Event.bind(asi.evt.takePicture, 'PictureModule', function() {
       t.takePicture();
     });
   },
@@ -24,7 +24,7 @@ asi.Picture = {
     navigator.camera.getPicture(onSuccess, onFail, {
       quality : 50,
       destinationType : Camera.DestinationType.FILE_URI,
-      // sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
+      sourceType : navigator.camera.PictureSourceType.PHOTOLIBRARY,
       correctOrientation : true,
       targetWidth : '1024'
     });

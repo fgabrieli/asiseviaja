@@ -4,7 +4,7 @@ asi.AboutUsModal = {
 
     $scope.isVisible = false;
 
-    Event.bind(asi.evt.aboutUs, t.showModal);
+    Event.bind(asi.evt.aboutUs, 'AboutUsModule', t.showModal);
   },
   showModal : function() {
     $scope.isVisible = true;
