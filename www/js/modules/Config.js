@@ -1,4 +1,5 @@
 asi.Config = {
+  isDebugEnabled : true,
   events : {
     takePicture : 'TakePicture',
     pictureTaken : 'PictureTaken',

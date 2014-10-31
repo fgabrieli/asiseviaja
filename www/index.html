@@ -18,19 +18,6 @@
 </head>
 
 <body data-ng-app="asiApp" class="clearfix">
-  <!--   <h1>Asi se viaja :S</h1> -->
-
-  <!--   <div id="pictures" data-ng-controller="asi.Picture.ngController"> -->
-  <!--     <div class="picture" data-ng-repeat="picture in pictures"> -->
-  <!--       <img data-ng-src="{{picture.imageUrl}}" /><br /> <span class="caption"> -->
-  <!--         {{picture.caption}} </span> -->
-  <!--       <button style="width: 100px; height: 50px" data-ng-click="share(picture)">Share</button> -->
-  <!--     </div> -->
-
-  <!--     <button style="width: 200px; height: 200px" data-ng-click="takeAPicture()">Take -->
-  <!--       a picture!</button> -->
-  <!--   </div> -->
-
   <div id="container">
 
     <!-- Top menu -->
@@ -39,20 +26,17 @@
       <div id="gray-bar" class="clearfix">
         <div id="btn-home"></div>
         <ul id="btn-container" class="clearfix">
-          <li class="btn-header"><a data-ng-click="share()"> <img
-              src="img/share.png" width="60" height="60" />
+          <li class="btn-header"><a data-ng-click="share()"> <img src="img/share.png" width="60" height="60" />
           </a></li>
-          <li class="btn-header"><a data-ng-click="aboutUs()"> <img
-              src="img/about.png" width="60" height="60" />
+          <li class="btn-header"><a data-ng-click="aboutUs()"> <img src="img/about.png" width="60" height="60" />
           </a></li>
         </ul>
       </div>
       <h1>ASI SE VIAJA</h1>
     </div>
 
-    <div id="pictures" class="clearfix"
-      data-ng-controller="asi.Picture.ngController">
-      
+    <div id="pictures" class="clearfix" data-ng-controller="asi.Picture.ngController">
+
       <a data-ng-click="uploadPicture()" style="cursor: pointer">Upload!</a>
 
       <!-- List of pictures -->
@@ -81,8 +65,7 @@
 
   <!-- Modals -->
 
-  <div id="about-us-modal" data-ng-controller="asi.AboutUsModal.ngController"
-    data-ng-show="isVisible">
+  <div id="about-us-modal" data-ng-controller="asi.AboutUsModal.ngController" data-ng-show="isVisible">
     (to be) || !(to be)
 
     <p>Hey man!</p>
@@ -118,9 +101,7 @@
   <script type="text/javascript" src="js/modules/AboutUsModal.js"></script>
   <script type="text/javascript" src="js/modules/Upload.js"></script>
 
-  <script type="text/javascript"
-    src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
-
+  <script type="text/javascript" src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
 </body>
 

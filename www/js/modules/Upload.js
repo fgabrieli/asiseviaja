@@ -1,4 +1,5 @@
 asi.Upload = {
+  SERVER_UPLOAD_SCRIPT : 'http://10.60.76.18/asiserver/upload_picture.php',
   init : function() {
     var t = asi.Upload;
     Event.bind(asi.evt.pictureTaken, function(data) {
@@ -7,6 +8,8 @@ asi.Upload = {
     });
   },
   uploadImage : function(imageUri) {
+    var t = asi.Upload;
+    
     var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = imageUri.substr(imageUri.lastIndexOf('/') + 1);
@@ -19,7 +22,7 @@ asi.Upload = {
     // params.value2 = "param";
     //
     // options.params = params;
-    
+
     options.chunkedMode = false;
 
     function onSuccess(r) {
@@ -35,8 +38,7 @@ asi.Upload = {
     ;
 
     var ft = new FileTransfer();
-    ft.upload(imageUri, "http://192.168.210.100/asiserver/upload_picture.php", onSuccess, onError,
-        options);
+    ft.upload(imageUri, t.SERVER_UPLOAD_SCRIPT, onSuccess, onError, options);
   }
 };
 
