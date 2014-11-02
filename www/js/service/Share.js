@@ -1,7 +1,11 @@
 /**
  * Social sharing (facebook, twitter, etc)
  */
-asi.Share = {
+asi.Service.Share = $.extend(true, {}, asi.Service, {
+  config : {
+    name : 'Share',
+    isEnabled : true
+  },
   socialSharing : false,
   init : function() {
 
@@ -23,18 +27,19 @@ asi.Share = {
     }
 
     if (data.message == '' && data.image == '' && data.link == '') {
-      asi.Log('Calling share but there is nothing to be shared, data: ', data);
+      asiLog('Calling share but there is nothing to be shared, data: ', data);
     } else {
 
       // Share the data using the SocialSharing-PhoneGap-Plugin
-      // @see https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/blob/master/README.md
+      // @see
+      // https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/blob/master/README.md
 
       var shareLib = window.plugins.socialsharing;
       shareLib.share(data.message, null, data.image, data.link);
     }
   }
-};
+});
 
 $(document).ready(function() {
-  asi.Share.init();
+  asi.Service.Share.register();
 });

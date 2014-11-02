@@ -1,19 +1,26 @@
-asi.Upload = {
-  SERVER_UPLOAD_SCRIPT : 'http://192.168.210.100/asiserver/service/upload.php',
+/**
+ * Upload service.
+ */
+asi.Service.Upload = $.extend(true, {}, asi.Service, {
+  config : {
+    name : 'Upload',
+    isEnabled : true,
+    uploadScript : 'http://192.168.210.100/asiserver/service/upload.php',
+  },
   init : function() {
-    var t = asi.Upload;
+    var t = asi.Service.Upload;
     Event.bind(asi.evt.pictureTaken, 'UploadModule', function(data) {
-      asi.Log('asi.Upload: catched asi.evt.pictureTaken for: ', data.imageUri);
+      asiLog('asi.Service.Upload: catched asi.evt.pictureTaken for: ', data.imageUri);
       t.uploadImage(data.imageUri);
     });
   },
   uploadImage : function(imageUri) {
-    var t = asi.Upload;
-    
+    var t = asi.Service.Upload;
+
     var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = imageUri.substr(imageUri.lastIndexOf('/') + 1);
-    asi.Log('fileName=', options.fileName);
+    asiLog('fileName=', options.fileName);
     options.mimeType = "image/jpeg";
 
     // var params = new Object();
@@ -26,22 +33,22 @@ asi.Upload = {
     options.chunkedMode = false;
 
     function onSuccess(r) {
-      asi.Log("Code = " + r.responseCode);
-      asi.Log("Response = " + r.response);
-      asi.Log("Sent = " + r.bytesSent);
+      asiLog("Code = " + r.responseCode);
+      asiLog("Response = " + r.response);
+      asiLog("Sent = " + r.bytesSent);
     }
     ;
 
     function onError(error) {
-      asi.Log("An error has occurred: Code = ", error.code);
+      asiLog("An error has occurred: Code = ", error.code);
     }
     ;
 
     var ft = new FileTransfer();
-    ft.upload(imageUri, t.SERVER_UPLOAD_SCRIPT, onSuccess, onError, options);
+    ft.upload(imageUri, t.config.uploadScript, onSuccess, onError, options);
   }
-};
+});
 
 $(document).ready(function() {
-  asi.Upload.init();
+  asi.Service.Upload.register();
 });

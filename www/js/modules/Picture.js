@@ -9,7 +9,7 @@ asi.Picture = {
     
   },
   takePicture : function() {
-    asi.Log('takePicture');
+    asiLog('takePicture');
 
     var onSuccess = function(imageUri) {
       Event.fire(asi.evt.pictureTaken, {
@@ -21,7 +21,7 @@ asi.Picture = {
       console.log("$scope.takePicture() failed, error message: ", message);
     };
 
-    asi.Log('navigator.camera.getPicture()');
+    asiLog('navigator.camera.getPicture()');
 
     navigator.camera.getPicture(onSuccess, onFail, {
       quality : 50,
@@ -46,12 +46,12 @@ asi.Picture = {
     $scope.pictures = t.getPictures();
 
     $scope.takePicture = function() {
-      asi.Log('$scope.takeAPicture()');
+      asiLog('$scope.takeAPicture()');
       Event.fire(asi.evt.takePicture);
     };
 
     $scope.share = function(picture) {
-      asi.Log('$scope.share: ', picture);
+      asiLog('$scope.share: ', picture);
 
       Event.fire(asi.evt.share, {
         message : picture.caption,
