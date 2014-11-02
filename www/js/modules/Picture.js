@@ -5,6 +5,8 @@ asi.Picture = {
     Event.bind(asi.evt.takePicture, 'PictureModule', function() {
       t.takePicture();
     });
+    
+    
   },
   takePicture : function() {
     asi.Log('takePicture');
