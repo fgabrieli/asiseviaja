@@ -1,5 +1,5 @@
 asi.Upload = {
-  SERVER_UPLOAD_SCRIPT : 'http://10.60.76.18/asiserver/service/upload.php',
+  SERVER_UPLOAD_SCRIPT : 'http://192.168.210.100/asiserver/service/upload.php',
   init : function() {
     var t = asi.Upload;
     Event.bind(asi.evt.pictureTaken, 'UploadModule', function(data) {
