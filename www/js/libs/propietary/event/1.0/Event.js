@@ -24,6 +24,14 @@ var Event = {
     });
   },
   /**
+   * TODO: missing unbind method.
+   * 
+   * @param {String} event id.
+   */
+  unbind : function(id) {
+    // TODO
+  },
+  /**
    * Fire an event.
    * 
    * @param {String}

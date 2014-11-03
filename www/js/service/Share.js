@@ -11,7 +11,7 @@ asi.Service.Share = $.extend(true, {}, asi.Service, {
 
     // Sharing is handled as an event
 
-    Event.bind(asi.evt.share, 'ShareModule', this.share);
+    Event.bind(asi.evt.share, 'ServiceShare', this.share);
   },
   share : function(data) {
     if (typeof data.message == 'undefined') {

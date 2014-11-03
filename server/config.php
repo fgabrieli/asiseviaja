@@ -5,7 +5,7 @@
 
 // Db config
 
-define('DB_HOST', 'localhost');
+define('DB_HOST', '192.168.210.100');
 define('DB_PORT', 3306);
 define('DB_NAME', 'asiseviaja');
 define('DB_USER', 'asi');
@@ -17,6 +17,6 @@ define('UPLOAD_DIRECTORY', 'c:/home/asiseviaja/server/upload/');
 
 // Pictures URL
 
-define('PICTURE_URL', 'http://10.60.76.18/asiserver/upload');
+define('PICTURE_URL', 'http://192.168.210.100/asiserver/upload.php');
 
 ?>

@@ -5,11 +5,11 @@ asi.Service.Upload = $.extend(true, {}, asi.Service, {
   config : {
     name : 'Upload',
     isEnabled : true,
-    uploadScript : 'http://192.168.210.100/asiserver/service/upload.php',
+    uploadScript : asi.Config.serverUrl + '/asiserver/service/upload.php',
   },
   init : function() {
     var t = asi.Service.Upload;
-    Event.bind(asi.evt.pictureTaken, 'UploadModule', function(data) {
+    Event.bind(asi.evt.pictureTaken, 'ServiceUpload', function(data) {
       asiLog('asi.Service.Upload: catched asi.evt.pictureTaken for: ', data.imageUri);
       t.uploadImage(data.imageUri);
     });
