@@ -1,20 +1,31 @@
 asi.Picture = {
   init : function() {
-    // Initialize module
+
+    // Get pictures
+
+    t.getPictures();
   },
   getPictures : function() {
     
-    // Retrieve images
-    
-    return [ {
-      imageUrl : 'www/img/test.jpg',
-      caption : 'This is a good image'
-    } ];
+    // Get pictures
+
+    Event.fire(asi.evt.getPictures, {
+      start : 0,
+      end : 10
+    });
   },
   ngController : function($scope) {
     var t = asi.Picture;
 
-    $scope.pictures = t.getPictures();
+    Event.bind(asi.evt.gotPictures, 'PictureModule', function(pictures) {
+      asiLog('asi.Picture.ngController, gotPictures: ', pictures);
+
+      $scope.pictures = pictures;
+
+      setTimeout(function() {
+        $scope.$apply();
+      }, 0);
+    });
 
     $scope.takePicture = function() {
       Event.fire(asi.evt.takePicture);
@@ -26,6 +37,7 @@ asi.Picture = {
         image : picture.imageUrl
       });
     };
+
   }
 };
 

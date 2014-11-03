@@ -25,7 +25,7 @@ if ($hasBoundaries) {
 
     // Fetch pictures
 
-    $stmt = $db->prepare('SELECT fileName FROM pictures LIMIT :start, :end');
+    $stmt = $db->prepare('SELECT fileName, caption FROM pictures LIMIT :start, :end');
     $stmt->bindParam(':start', $start, PDO::PARAM_INT);
     $stmt->bindParam(':end', $end, PDO::PARAM_INT);
     $stmt->execute();
