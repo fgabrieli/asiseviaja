@@ -35,7 +35,7 @@ function saveToDb($fileName) {
 
     // Insert the picture
 
-    $stmt = $db->prepare('INSERT INTO pictures (fileName) VALUES :fileName');
+    $stmt = $db->prepare('INSERT INTO pictures (fileName) VALUES (:fileName)');
     $stmt->bindParam(':fileName', $fileName, PDO::PARAM_STR);
     $stmt->execute();
 
