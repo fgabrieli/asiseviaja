@@ -3,7 +3,7 @@ asi.Picture = {
 
     // Get pictures
 
-    t.getPictures();
+    this.getPictures();
   },
   getPictures : function() {
     
@@ -37,7 +37,6 @@ asi.Picture = {
         image : picture.imageUrl
       });
     };
-
   }
 };
 

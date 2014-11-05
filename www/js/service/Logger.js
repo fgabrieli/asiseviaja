@@ -26,6 +26,4 @@ asi.Service.Logger = $.extend(true, {}, asi.Service, {
   }
 });
 
-$(document).ready(function() {
-  asi.Service.Logger.register();
-});
+asi.Service.Logger.register();

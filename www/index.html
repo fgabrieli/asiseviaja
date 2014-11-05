@@ -40,16 +40,20 @@
       <!-- List of pictures -->
 
       <div id="left-col">
-        <div class="img-container">
-          <img src="app-pic/1.jpg" alt="" />
-          <p class="caption">Lorem ipsum dolor...</p>
+        <div data-ng-repeat="picture in pictures" class="img-container">
+          <div data-ng-if="$even">
+            <img src="{{picture.url}}" alt="" />
+            <p class="caption">{{picture.caption}}</p>
+          </div>
         </div>
       </div>
 
       <div id="right-col">
-        <div class="img-container">
-          <img src="app-pic/2.jpg" alt="" />
-          <p class="caption">Lorem ipsum dolor...</p>
+        <div data-ng-repeat="picture in pictures" class="img-container">
+          <div data-ng-if="$odd">
+            <img src="{{picture.url}}" alt="" />
+            <p class="caption">{{picture.caption}}</p>
+          </div>
         </div>
       </div>
 

@@ -8,10 +8,11 @@ asi.Service.Share = $.extend(true, {}, asi.Service, {
   },
   socialSharing : false,
   init : function() {
-
+    var t = asi.Service.Share;
+    
     // Sharing is handled as an event
 
-    Event.bind(asi.evt.share, 'ServiceShare', this.share);
+    Event.bind(asi.evt.share, 'ServiceShare', t.share);
   },
   share : function(data) {
     if (typeof data.message == 'undefined') {
