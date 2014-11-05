@@ -1,0 +1,14 @@
+/**
+ * CSS styles for cellphones 
+ */
+@media ( max-width : 540px) {
+  #left-col, #right-col {
+    float: left;
+    width: 100%;
+    margin: 0px;
+  }
+  
+  #btn-shot {
+    background-image: url("../img/shot.png");
+  }
+}

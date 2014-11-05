@@ -69,7 +69,7 @@ h1{
 #left-col,
 #right-col{
 	float: left;
-	width: 330px;
+	width: 49%;
 }
 #left-col{
 	margin-right: 10px;

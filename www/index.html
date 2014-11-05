@@ -15,6 +15,12 @@
 <link href="css/app.css" type="text/css" rel="stylesheet" />
 <link href="css/about-us-modal.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="css/picture.css" />
+
+<!-- Media specific styles -->
+
+<!-- Cellphones -->
+<link rel="stylesheet" type="text/css" href="css/media-cel.css" />
+
 </head>
 
 <body data-ng-app="asiApp" class="clearfix">
@@ -59,9 +65,7 @@
 
       <!-- Take a new picture -->
 
-      <div id="btn-shot">
-        <a data-ng-click="takePicture()"><img src="img/shot.png" /></a>
-      </div>
+      <div id="btn-shot" data-ng-click="takePicture()"></div>
     </div>
   </div>
 
