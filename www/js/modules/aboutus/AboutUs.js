@@ -1,16 +1,21 @@
-asi.AboutUsModal = {
+asi.AboutUs = {
   ngController : function($scope) {
-    var t = asi.AboutUsModal;
+    var t = asi.AboutUs;
 
     $scope.isVisible = false;
 
-    Event.bind(asi.evt.aboutUs, 'AboutUsModule', t.showModal);
-  },
-  showModal : function() {
-    $scope.isVisible = true;
+    function open() {
+      $scope.isVisible = true;
 
-    if (!$scope.$$phase) {
-      $scope.$apply();
+      setTimeout(function() {
+        $scope.$apply();
+      }, 0);
+    }
+
+    Event.bind(asi.evt.aboutUs, 'AboutUsModule', open);
+    
+    $scope.close = function() {
+      $scope.isVisible = false;
     }
   }
 };

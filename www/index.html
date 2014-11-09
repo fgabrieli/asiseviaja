@@ -10,11 +10,11 @@
 
 <title>Asi se viaja!</title>
 
-<!-- Css Stylesheets -->
-<!-- <link rel="stylesheet" type="text/css" href="css/main.css" /> -->
+<!-- App css -->
 <link href="css/app.css" type="text/css" rel="stylesheet" />
-<link href="css/about-us-modal.css" type="text/css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/picture.css" />
+
+<!-- Module css -->
+<link href="js/modules/aboutus/view/css/aboutus.css" type="text/css" rel="stylesheet" />
 
 <!-- Media specific styles -->
 
@@ -33,7 +33,7 @@
     <!-- Top menu -->
     <div id="topmenu" data-ng-controller="asi.TopMenu.ngController">
       <div id="gray-bar" class="clearfix">
-        <div id="btn-home"></div>
+        <a id="btn-home" href="/asiseviaja"></a>
         <ul id="btn-container" class="clearfix">
           <li class="btn-header"><a data-ng-click="share()"> <img src="img/share.png" width="60" height="60" />
           </a></li>
@@ -107,7 +107,7 @@
   <!-- Modules -->
   <script type="text/javascript" src="js/modules/picture/Picture.js"></script>
   <script type="text/javascript" src="js/modules/topmenu/TopMenu.js"></script>
-  <script type="text/javascript" src="js/modules/aboutus/AboutUsModal.js"></script>
+  <script type="text/javascript" src="js/modules/aboutus/AboutUs.js"></script>
 
   <script type="text/javascript" src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 

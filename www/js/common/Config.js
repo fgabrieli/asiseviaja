@@ -9,7 +9,8 @@ asi.Config = {
     getPictures : 'GetPictures',
     gotPictures : 'GotPictures',
     uploadFile : 'UploadFile',
-    fileUploaded : 'FileUploaded'
+    fileUploaded : 'FileUploaded',
+    aboutUs : 'AboutUs'
   },
 };
 

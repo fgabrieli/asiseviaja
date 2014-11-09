@@ -61,7 +61,9 @@ asi.PictureComment = {
     var t = asi.PictureComment;
 
     t.scope.isVisible = true;
-    setTimeout(t.scope.$apply, 0);
+    setTimeout(function() {
+      t.scope.$apply
+    }, 0);
   },
   ngController : function($scope) {
     var t = asi.PictureComment;
