@@ -2,13 +2,31 @@
  * CSS styles for cellphones 
  */
 @media ( max-width : 540px) {
+  #topmenu h1 {
+    background: url('../img/logo.png') no-repeat;
+    background-size: 150px;
+    height: 150px;
+    text-indent: -9999px;
+    margin-top: -85px;
+    margin-left: 10px;
+  }
+  #topmenu #btn-home {
+    display: none;
+  }
+  #topmenu #gray-bar {
+    margin-top: 45px;
+  }
   #left-col, #right-col {
     float: left;
     width: 100%;
     margin: 0px;
   }
-  
   #btn-shot {
     background-image: url("../img/shot.png");
+    background-size: 114px;
+    margin-left: -50px;
+    width: 114px;
+    height: 114px;
+    bottom: 2px;
   }
 }

@@ -37,8 +37,42 @@ asi.Picture = {
         image : picture.imageUrl
       });
     };
+    
+    Event.bind(asi.evt.pictureTaken, 'PictureModule', function(data) {
+      asiLog('PictureModule catched pictureTaken, firing upload event');
+
+      // Upload image to server right away
+      
+      Event.fire(asi.evt.uploadFile, {
+        uri : data.imageUri
+      });
+    });
+    
+    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
+      var cmtModal = asi.PictureComment
+      cmtModal.show();
+    });
   }
 };
+
+asi.PictureComment = {
+  scope : {},
+  show : function() {
+    var t = asi.PictureComment;
+
+    t.scope.isVisible = true;
+    setTimeout(t.scope.$apply, 0);
+  },
+  ngController : function($scope) {
+    var t = asi.PictureComment;
+
+    t.scope = $scope;
+
+    $scope.close = function() {
+      $scope.isVisible = false;
+    }
+  }
+}
 
 $(document).ready(function() {
   asi.Picture.init();

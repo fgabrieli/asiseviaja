@@ -9,17 +9,17 @@ asi.Service.Upload = $.extend(true, {}, asi.Service, {
   },
   init : function() {
     var t = asi.Service.Upload;
-    Event.bind(asi.evt.pictureTaken, 'ServiceUpload', function(data) {
-      asiLog('asi.Service.Upload: catched asi.evt.pictureTaken for: ', data.imageUri);
-      t.uploadImage(data.imageUri);
+    Event.bind(asi.evt.uploadFile, 'ServiceUpload', function(data) {
+      asiLog('ServiceUpload: catched uploadFile, uploading=', data);
+      t.uploadFile(data.uri);
     });
   },
-  uploadImage : function(imageUri) {
+  uploadFile : function(uri) {
     var t = asi.Service.Upload;
 
     var options = new FileUploadOptions();
     options.fileKey = "file";
-    options.fileName = imageUri.substr(imageUri.lastIndexOf('/') + 1);
+    options.fileName = uri.substr(uri.lastIndexOf('/') + 1);
     asiLog('fileName=', options.fileName);
     options.mimeType = "image/jpeg";
 
@@ -36,6 +36,11 @@ asi.Service.Upload = $.extend(true, {}, asi.Service, {
       asiLog("Code = " + r.responseCode);
       asiLog("Response = " + r.response);
       asiLog("Sent = " + r.bytesSent);
+      
+      Event.fire(asi.evt.fileUploaded, {
+        uri : uri,
+        options : options
+      });
     }
     ;
 
@@ -45,7 +50,7 @@ asi.Service.Upload = $.extend(true, {}, asi.Service, {
     ;
 
     var ft = new FileTransfer();
-    ft.upload(imageUri, t.config.uploadScript, onSuccess, onError, options);
+    ft.upload(uri, t.config.uploadScript, onSuccess, onError, options);
   }
 });
 

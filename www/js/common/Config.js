@@ -7,7 +7,9 @@ asi.Config = {
     share : 'Share',
     aboutUs : 'AboutUs',
     getPictures : 'GetPictures',
-    gotPictures : 'GotPictures'
+    gotPictures : 'GotPictures',
+    uploadFile : 'UploadFile',
+    fileUploaded : 'FileUploaded'
   },
 };
 

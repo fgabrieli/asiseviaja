@@ -26,8 +26,11 @@
 <body data-ng-app="asiApp" class="clearfix">
   <div id="container">
 
-    <!-- Top menu -->
+    <!-- Module views -->
+    <div class="module-view" data-ng-include="" data-src="'js/modules/aboutus/view/aboutus.html'"></div>
+    <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
 
+    <!-- Top menu -->
     <div id="topmenu" data-ng-controller="asi.TopMenu.ngController">
       <div id="gray-bar" class="clearfix">
         <div id="btn-home"></div>
@@ -69,14 +72,6 @@
     </div>
   </div>
 
-  <!-- Modals -->
-
-  <div id="about-us-modal" data-ng-controller="asi.AboutUsModal.ngController" data-ng-show="isVisible">
-    (to be) || !(to be)
-
-    <p>Hey man!</p>
-  </div>
-
   <!-- External Libs -->
 
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -110,9 +105,9 @@
   <script type="text/javascript" src="js/service/Picture.js"></script>
 
   <!-- Modules -->
-  <script type="text/javascript" src="js/modules/Picture.js"></script>
-  <script type="text/javascript" src="js/modules/TopMenu.js"></script>
-  <script type="text/javascript" src="js/modules/AboutUsModal.js"></script>
+  <script type="text/javascript" src="js/modules/picture/Picture.js"></script>
+  <script type="text/javascript" src="js/modules/topmenu/TopMenu.js"></script>
+  <script type="text/javascript" src="js/modules/aboutus/AboutUsModal.js"></script>
 
   <script type="text/javascript" src="js/libs/socialsharing/1.0/SocialSharing.js"></script>
 
