@@ -18,9 +18,19 @@ if (!empty($_FILES)) {
 
   // Add entry to the db
 
-  saveToDb($fileName);
+  $pictureId = saveToDb($fileName);
+
+  header('application/json');
+  $response = array('pictureId' => $pictureId);
+  echo json_encode($response);
 }
 
+/**
+ * Insert an entry in the pictures table with the file name.
+ * 
+ * @param unknown $fileName
+ * @return new picture id in the table
+ */
 function saveToDb($fileName) {
   try {
 
@@ -38,6 +48,8 @@ function saveToDb($fileName) {
     $stmt = $db->prepare('INSERT INTO pictures (fileName) VALUES (:fileName)');
     $stmt->bindParam(':fileName', $fileName, PDO::PARAM_STR);
     $stmt->execute();
+    
+    return $db->lastInsertId('id');
 
   } catch (Exception $e) {
 
