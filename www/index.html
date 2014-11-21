@@ -10,11 +10,16 @@
 
 <title>Asi se viaja!</title>
 
+<!-- Bootstrap -->
+<link href="js/libs/bootstrap/3.3.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
 <!-- App css -->
 <link href="css/app.css" type="text/css" rel="stylesheet" />
+<link href="css/modal.css" type="text/css" rel="stylesheet" />
 
 <!-- Module css -->
 <link href="js/modules/aboutus/view/css/aboutus.css" type="text/css" rel="stylesheet" />
+<link href="js/modules/picture/view/css/picture-preview.css" type="text/css" rel="stylesheet" />
 
 <!-- Media specific styles -->
 
@@ -28,7 +33,7 @@
 
     <!-- Module views -->
     <div class="module-view" data-ng-include="" data-src="'js/modules/aboutus/view/aboutus.html'"></div>
-    <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
+    <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture-preview.html'"></div>
 
     <!-- Top menu -->
     <div id="topmenu" data-ng-controller="asi.TopMenu.ngController">
@@ -77,6 +82,7 @@
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/libs/angular/1.2.26/angular.min.js"></script>
   <script type="text/javascript" src="js/libs/json2/1.0/json2.min.js"></script>
+  <script type="text/javascript" src="js/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
   <!-- App initialization -->
   <script type="text/javascript">

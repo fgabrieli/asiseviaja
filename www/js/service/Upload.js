@@ -37,9 +37,12 @@ asi.Service.Upload = $.extend(true, {}, asi.Service, {
       asiLog("Response = " + r.response);
       asiLog("Sent = " + r.bytesSent);
       
+      asiLog('uploadFile, onSuccess: response=', JSON.parse(r.response));
+      
       Event.fire(asi.evt.fileUploaded, {
         uri : uri,
-        options : options
+        options : options,
+        response: JSON.parse(r.response)
       });
     }
     ;

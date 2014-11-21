@@ -7,12 +7,18 @@ GRIS		566371
 BACKGROUND  efe4ca
 */
 
+html {
+  height: 100%;  
+}
+
 body{
 	background: #efe4ca;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: 'Arial', sans-serif;
+	
+	height: 100%;
 }
 h1{
 	background: url('../img/logo.png') no-repeat;
@@ -124,8 +130,10 @@ h1{
 
 
 .module-view {
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 40000;
 }
 
 a {

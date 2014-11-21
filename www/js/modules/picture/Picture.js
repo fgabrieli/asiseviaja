@@ -49,27 +49,51 @@ asi.Picture = {
     });
     
     Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
-      var cmtModal = asi.PictureComment
-      cmtModal.show();
+      var preview = asi.PicturePreview;
+      preview.setImage({
+        id : data.response.pictureId,
+        uri : data.uri
+      });
+      preview.show();
     });
   }
 };
 
-asi.PictureComment = {
+asi.PicturePreview = {
   scope : {},
+  img : {},
+  setImage : function(img) {
+    var t = asi.PicturePreview;
+    $.extend(t.img, img);
+  },
   show : function() {
-    var t = asi.PictureComment;
+    var t = asi.PicturePreview;
 
     t.scope.isVisible = true;
     setTimeout(function() {
-      t.scope.$apply
+      t.scope.$apply();
     }, 0);
   },
   ngController : function($scope) {
-    var t = asi.PictureComment;
-
+    var t = asi.PicturePreview;
     t.scope = $scope;
+    
+    $scope.img = {};
+    t.img = $scope.img;
 
+    $scope.isVisible = false;
+    $scope.caption = '';
+    
+    $scope.setCaption = function() {
+      asiLog('Setting caption for img=', t.img)
+      
+      Event.fire(asi.evt.setPictureCaption, {
+        id : t.img.id,
+        caption : $scope.caption
+      });
+      
+    };
+    
     $scope.close = function() {
       $scope.isVisible = false;
     }

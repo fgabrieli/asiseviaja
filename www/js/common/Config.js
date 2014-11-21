@@ -8,6 +8,7 @@ asi.Config = {
     aboutUs : 'AboutUs',
     getPictures : 'GetPictures',
     gotPictures : 'GotPictures',
+    setPictureCaption : 'SetPictureCaption',
     uploadFile : 'UploadFile',
     fileUploaded : 'FileUploaded',
     aboutUs : 'AboutUs'
