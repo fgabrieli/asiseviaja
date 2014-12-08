@@ -20,8 +20,18 @@ asi.Service.Picture = $.extend(true, {}, asi.Service, {
 
     var onSuccess = function(pictureData) {
       Event.fire(asi.evt.gotPictures, pictureData);
-    }
+    };
 
+    $.ajax({
+      url : t.config.pictureUrl,
+      type : 'get',
+      dataType : 'json',
+      data : range,
+      success : onSuccess,
+      error : function(jqXHR, textStatus, errorThrown) {
+        asiLog('asi.Service.Picture: error while retrieving pictures from server, error=', errorThrown);
+      }
+    });
     $.get(t.config.pictureUrl, range, onSuccess);
   },
   setPictureCaption : function(data) {

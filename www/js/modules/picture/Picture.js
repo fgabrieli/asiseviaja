@@ -16,9 +16,9 @@ asi.Picture = {
   },
   ngController : function($scope) {
     var t = asi.Picture;
-
+    
     Event.bind(asi.evt.gotPictures, 'PictureModule', function(pictures) {
-      asiLog('asi.Picture.ngController, gotPictures: ', pictures);
+//      asiLog('asi.Picture.ngController, gotPictures: ', pictures);
 
       $scope.pictures = pictures;
 
@@ -32,6 +32,7 @@ asi.Picture = {
     };
 
     $scope.share = function(picture) {
+      asiLog('$scope.share, message=', picture.caption, ', imageUrl=', picture.imageUrl);
       Event.fire(asi.evt.share, {
         message : picture.caption,
         image : picture.imageUrl
@@ -55,6 +56,8 @@ asi.Picture = {
         uri : data.uri
       });
       preview.show();
+      
+      t.getPictures();
     });
   }
 };
@@ -80,9 +83,11 @@ asi.PicturePreview = {
     
     $scope.img = {};
     t.img = $scope.img;
+    t.img.uri = 'http://192.168.200.100/asiserver/upload/picture-1414789913-225037.jpg';
 
     $scope.isVisible = false;
     $scope.caption = '';
+    $scope.isKeyboardOpen = false;
     
     $scope.setCaption = function() {
       asiLog('Setting caption for img=', t.img)
@@ -96,7 +101,23 @@ asi.PicturePreview = {
     
     $scope.close = function() {
       $scope.isVisible = false;
-    }
+    };
+    
+    $scope.onClickTxt = function() {
+      $scope.isKeyboardOpen = true;
+    };
+    
+    $scope.onBlurTxt = function() {
+      $scope.isKeyboardOpen = false;
+    };
+    
+    Event.bind(asi.evt.backKeyDown, 'PictureModule', function() {
+      asiLog('PictureModule: backKey pressed');
+      $scope.isKeyboardOpen = false;
+      setTimeout(function() {
+        $scope.$apply();
+      }, 0);
+    });
   }
 }
 

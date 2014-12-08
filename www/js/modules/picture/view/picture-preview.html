@@ -1,7 +1,12 @@
-<div id="picture-preview" class="asi-modal" data-ng-controller="asi.PicturePreview.ngController">
-  <img data-ng-src="http://192.168.210.100/asiserver/upload/picture-1415061611-135315.jpg" /> Add a comment here...
-  <textarea rows="10" cols="20" data-ng-bind="caption"></textarea>
+<div id="picture-preview" class="spotlight" data-ng-controller="asi.PicturePreview.ngController">
+  <div class="asi-modal" data-ng-class="{'keyboard-open' : isKeyboardOpen}">
+    <img class="thumb" data-ng-src="{{img.uri}}" />
+    <h2 class="title">Agrega un comentario!</h2>
+    <textarea rows="10" cols="20" data-ng-bind="caption" data-ng-click="onClickTxt()" data-ng-blur="onBlurTxt()" maxlength="250"></textarea>
 
-  <button class="btn btn-default" data-ng-click="setCaption()">Add comment</button>
-  <button class="btn  btn-default" data-ng-click="close()">Skip</button>
+    <div class="button-container">
+      <button class="btn btn-default post" data-qng-click="setCaption()">Postear</button>
+      <button class="btn btn-default cancel" data-ng-click="close()">Cancelar</button>
+    </div>
+  </div>
 </div>

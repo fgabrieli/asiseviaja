@@ -1,0 +1,55 @@
+/* Samsung galaxy s4 mini, default */
+@media ( max-device-width : 540px) {
+  #picture-preview .asi-modal {
+    position: fixed;
+    width: 400px;
+    left: 70px;
+    height: auto;
+    top: 40px;
+    font-size: 24px;
+  }
+  #picture-preview textarea {
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+  }
+  #picture-preview .thumb {
+    max-width: 100%;
+    max-height: 600px;
+    margin: 0 auto 10px;
+  }
+  #picture-preview .keyboard-open .thumb {
+    max-height: 260px;
+  }
+}
+
+/* Samsung galaxy s4 mini, landscape */
+@media ( max-device-width : 540px) and (orientation : landscape) {
+  #picture-preview .asi-modal {
+    position: fixed;
+    height: auto;
+    top: 15px;
+    font-size: 24px;
+    left: 280px;
+  }
+  #picture-preview textarea {
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #picture-preview .keyboard-open textarea {
+    font-size: 24px;
+    height: 135px;
+    width: 360px;
+    margin-bottom: 10px;
+  }
+  #picture-preview .thumb {
+    max-width: 100%;
+    max-height: 200px;
+    margin: 0 auto 10px;
+  }
+  #picture-preview .keyboard-open .thumb {
+    display: none;
+  }
+}
