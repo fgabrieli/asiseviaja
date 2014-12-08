@@ -2,8 +2,12 @@
   <div class="asi-modal" data-ng-class="{'keyboard-open' : isKeyboardOpen}">
     <img class="thumb" data-ng-src="{{img.uri}}" />
     <h2 class="title">Agrega un comentario!</h2>
-    <textarea rows="10" cols="20" data-ng-bind="caption" data-ng-click="onClickTxt()" data-ng-blur="onBlurTxt()" maxlength="250"></textarea>
+    <textarea rows="10" cols="20" data-ng-model="caption" maxlength="{{maxChars}}"></textarea>
 
+    <div class="character-count">
+      Characters: {{caption.length}} / {{maxChars}}
+    </div>
+    
     <div class="button-container">
       <button class="btn btn-default post" data-qng-click="setCaption()">Postear</button>
       <button class="btn btn-default cancel" data-ng-click="close()">Cancelar</button>

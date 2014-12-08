@@ -62,10 +62,14 @@
 	max-height: 200px;
 	margin: 0 auto 10px;
 }
-#picture-preview .title{
+#picture-preview .title, #picture-preview .character-count{
 	margin: 0 0 10px;
 	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
 	color: rgba(0,0,0,0.3);
+}
+
+#picture-preview .character-count {
+  margin-bottom: 10px;
 }

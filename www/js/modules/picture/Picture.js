@@ -63,6 +63,9 @@ asi.Picture = {
 };
 
 asi.PicturePreview = {
+  config : {
+    MAX_CAPTION_SIZE : 140
+  },
   scope : {},
   img : {},
   setImage : function(img) {
@@ -86,8 +89,12 @@ asi.PicturePreview = {
     t.img.uri = 'http://192.168.200.100/asiserver/upload/picture-1414789913-225037.jpg';
 
     $scope.isVisible = false;
+    
     $scope.caption = '';
+    
     $scope.isKeyboardOpen = false;
+
+    $scope.maxChars = t.config.MAX_CAPTION_SIZE;
     
     $scope.setCaption = function() {
       asiLog('Setting caption for img=', t.img)
@@ -103,21 +110,37 @@ asi.PicturePreview = {
       $scope.isVisible = false;
     };
     
-    $scope.onClickTxt = function() {
+    Event.bind(asi.evt.showKeyboard, 'PictureModule', function() {
       $scope.isKeyboardOpen = true;
-    };
-    
-    $scope.onBlurTxt = function() {
-      $scope.isKeyboardOpen = false;
-    };
-    
-    Event.bind(asi.evt.backKeyDown, 'PictureModule', function() {
-      asiLog('PictureModule: backKey pressed');
-      $scope.isKeyboardOpen = false;
-      setTimeout(function() {
+      
+      setTimeout(function() { 
         $scope.$apply();
       }, 0);
     });
+
+    Event.bind(asi.evt.hideKeyboard, 'PictureModule', function() {
+      $scope.isKeyboardOpen = false;
+      
+      setTimeout(function() { 
+        $scope.$apply();
+      }, 0);
+    });
+    
+//    $scope.onClickTxt = function() {
+//      $scope.isKeyboardOpen = true;
+//    };
+//    
+//    $scope.onBlurTxt = function() {
+//      $scope.isKeyboardOpen = false;
+//    };
+//    
+//    Event.bind(asi.evt.backKeyDown, 'PictureModule', function() {
+//      $scope.isKeyboardOpen = false;
+//
+//      setTimeout(function() {
+//        $scope.$apply();
+//      }, 0);
+//    });
   }
 }
 
