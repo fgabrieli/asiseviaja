@@ -41,12 +41,11 @@ var Event = {
    */
   fire : function(eventName, data) {
     var callbacks = this.events[eventName];
-    if (typeof callbacks == 'undefined') {
-      console.log('Error: trying to fire unexistent event: ', eventName);
-    }
-
-    for ( var i = 0; i < callbacks.length; i++) {
-      callbacks[i].fn(data);
+    var hasBindings = (typeof callbacks != 'undefined');
+    if (hasBindings) {
+      for ( var i = 0; i < callbacks.length; i++) {
+        callbacks[i].fn(data);
+      }
     }
   }
 };
