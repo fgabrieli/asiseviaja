@@ -1,14 +1,15 @@
 asi.Picture = {
   init : function() {
-
-    // Get pictures
-
-    this.getPictures();
+   var t = this;
+   
+   t.getPictures();
+    
+   // when a file is uploaded refresh the picture list
+   Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
+    t.getPictures();
+   });
   },
   getPictures : function() {
-    
-    // Get pictures
-
     Event.fire(asi.evt.getPictures, {
       start : 0,
       end : 10
@@ -18,12 +19,11 @@ asi.Picture = {
     var t = asi.Picture;
     
     Event.bind(asi.evt.gotPictures, 'PictureModule', function(pictures) {
-//      asiLog('asi.Picture.ngController, gotPictures: ', pictures);
-
       $scope.pictures = pictures;
 
       setTimeout(function() {
         $scope.$apply();
+        $(document).scrollTop(0);
       }, 0);
     });
 
@@ -42,29 +42,33 @@ asi.Picture = {
     Event.bind(asi.evt.pictureTaken, 'PictureModule', function(data) {
       asiLog('PictureModule catched pictureTaken, firing upload event');
 
-      // Upload image to server right away
-      
+      // upload image to server right away
       Event.fire(asi.evt.uploadFile, {
         uri : data.imageUri
       });
     });
-    
-    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
-      var preview = asi.PicturePreview;
-      preview.setImage({
-        id : data.response.pictureId,
-        uri : data.uri
-      });
-      preview.show();
-      
-      t.getPictures();
-    });
   }
 };
 
+/* XXX: asi.PicturePreview is not enabled at the moment, see asi.PicturePreview.config.enabled below */
 asi.PicturePreview = {
   config : {
+    enabled : false,
     MAX_CAPTION_SIZE : 140
+  },
+  init : function() {
+   if (this.config.enabled) {
+    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
+     var preview = asi.PicturePreview;
+     preview.setImage({
+       id : data.response.pictureId,
+       uri : data.uri
+     });
+     preview.show();
+     
+     t.getPictures();
+    });
+   }
   },
   scope : {},
   img : {},
@@ -98,12 +102,18 @@ asi.PicturePreview = {
     
     $scope.setCaption = function() {
       asiLog('Setting caption for img=', t.img)
+
+      // update in the view
+      t.img.caption = $scope.caption;
       
-      Event.fire(asi.evt.setPictureCaption, {
+      // send to server
+      var pictureSrv = asi.Service.PictureSrv;
+      pictureSrv.setCaption({
         id : t.img.id,
         caption : $scope.caption
       });
       
+      $scope.close();
     };
     
     $scope.close = function() {
@@ -125,25 +135,11 @@ asi.PicturePreview = {
         $scope.$apply();
       }, 0);
     });
-    
-//    $scope.onClickTxt = function() {
-//      $scope.isKeyboardOpen = true;
-//    };
-//    
-//    $scope.onBlurTxt = function() {
-//      $scope.isKeyboardOpen = false;
-//    };
-//    
-//    Event.bind(asi.evt.backKeyDown, 'PictureModule', function() {
-//      $scope.isKeyboardOpen = false;
-//
-//      setTimeout(function() {
-//        $scope.$apply();
-//      }, 0);
-//    });
   }
-}
+};
 
 $(document).ready(function() {
   asi.Picture.init();
+  
+  asi.PicturePreview.init();
 });

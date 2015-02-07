@@ -1,6 +1,6 @@
 <div id="picture-preview" class="spotlight" data-ng-controller="asi.PicturePreview.ngController" data-ng-show="isVisible">
   <div class="asi-modal" data-ng-class="{'keyboard-open' : isKeyboardOpen}">
-    <img class="thumb" data-ng-src="{{img.uri}}" />
+    <img class="thumb" data-ng-src="{{img.uri}}" height="200" />
     <h2 class="title">Agrega un comentario!</h2>
     <textarea rows="10" cols="20" data-ng-model="caption" maxlength="{{maxChars}}"></textarea>
 
@@ -9,7 +9,7 @@
     </div>
     
     <div class="button-container">
-      <button class="btn btn-default post" data-qng-click="setCaption()">Postear</button>
+      <button class="btn btn-default post" data-ng-click="setCaption()">Postear</button>
       <button class="btn btn-default cancel" data-ng-click="close()">Cancelar</button>
     </div>
   </div>

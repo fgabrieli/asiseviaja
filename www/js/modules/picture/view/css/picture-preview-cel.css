@@ -2,10 +2,10 @@
 @media ( max-device-width : 540px) {
   #picture-preview .asi-modal {
     position: fixed;
-    width: 400px;
-    left: 70px;
+    width: 80%;
+    left: 10%;
     height: auto;
-    top: 40px;
+    /* top: 40px; */
     font-size: 24px;
   }
   #picture-preview textarea {

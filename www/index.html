@@ -58,7 +58,10 @@
         <div data-ng-repeat="picture in pictures" class="img-container">
           <div data-ng-if="$even">
             <img src="{{picture.url}}" alt="" />
-            <p class="caption">{{picture.caption}}</p>
+            <p class="date">Foto tomada el {{picture.date}} hs.</p>
+            
+            <!-- caption is disabled for now -->
+            <!-- <p class="caption">{{picture.caption}}</p> -->
           </div>
         </div>
       </div>
@@ -67,7 +70,10 @@
         <div data-ng-repeat="picture in pictures" class="img-container">
           <div data-ng-if="$odd">
             <img src="{{picture.url}}" alt="" />
-            <p class="caption">{{picture.caption}}</p>
+            <p class="date">Foto tomada el {{picture.date}} hs.</p>
+            
+            <!-- caption is disabled for now -->
+            <!-- <p class="caption">{{picture.caption}}</p> -->
           </div>
         </div>
       </div>
@@ -109,7 +115,7 @@
   <script type="text/javascript" src="js/service/Share.js"></script>
   <script type="text/javascript" src="js/service/Upload.js"></script>
   <script type="text/javascript" src="js/service/Camera.js"></script>
-  <script type="text/javascript" src="js/service/Picture.js"></script>
+  <script type="text/javascript" src="js/service/PictureSrv.js"></script>
 
   <!-- Modules -->
   <script type="text/javascript" src="js/modules/picture/Picture.js"></script>

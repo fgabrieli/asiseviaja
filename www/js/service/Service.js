@@ -7,7 +7,7 @@ asi.Service = {
    * Service specific config.
    */
   config : {
-
+    isEnabled : true // enabled by default
   },
 
   /**
