@@ -21,8 +21,12 @@ if (!empty($_FILES)) {
   $pictureId = saveToDb($fileName);
 
   header('application/json');
-  $response = array('pictureId' => $pictureId);
-  echo json_encode($response);
+  
+  $response = array('pictureId' => $pictureId,
+                    'serverUrl' => PICTURE_URL . '/' . $fileName,
+                    'date' => date('d-m-Y H:i'));
+
+  echo json_encode($response, JSON_FORCE_OBJECT);
 }
 
 /**
