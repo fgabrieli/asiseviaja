@@ -14,8 +14,6 @@ asi.Service.PictureSrv = $.extend(true, {}, asi.Service, {
     var t = asi.Service.PictureSrv;
 
     Event.bind(asi.evt.getPictures, 'PictureSrv', t.getPictures);
-    
-//    Event.bind(asi.evt.setPictureCaption, 'PictureSrv', t.setPictureCaption);
   },
   getPictures : function(range) {
     var t = asi.Service.PictureSrv;
