@@ -3,41 +3,34 @@
  */
 asi.Service.Share = $.extend(true, {}, asi.Service, {
   config : {
-    name : 'Share',
-    isEnabled : true
+    name : 'Share'
   },
-  socialSharing : false,
   init : function() {
-    var t = asi.Service.Share;
+//    var t = asi.Service.Share;
     
     // Sharing is handled as an event
-
-    Event.bind(asi.evt.share, 'ServiceShare', t.share);
   },
+  /*
+   * public 
+   * 
+   * Fire the share widget.
+   * 
+   * @param object data with message, image, link
+   */
   share : function(data) {
-    if (typeof data.message == 'undefined') {
-      data.message = '';
-    }
+   var isValid = ((typeof data.message != 'undefined') && (typeof data.link != 'undefined') && (data.message.length > 0) && (data.link.length > 0));
 
-    if (typeof data.image == 'undefined') {
-      data.image = '';
-    }
+   if (isValid) {
+    var hasImage = (typeof data.image != 'undefined');
+    data.image = hasImage ? data.image : '';
 
-    if (typeof data.link == 'undefined') {
-      data.link = '';
-    }
+    // Share the data using the SocialSharing-PhoneGap-Plugin
+    // @see
+    // https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/blob/master/README.md
 
-    if (data.message == '' && data.image == '' && data.link == '') {
-      asiLog('Calling share but there is nothing to be shared, data: ', data);
-    } else {
-
-      // Share the data using the SocialSharing-PhoneGap-Plugin
-      // @see
-      // https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/blob/master/README.md
-
-      var shareLib = window.plugins.socialsharing;
-      shareLib.share(data.message, null, data.image, data.link);
-    }
+     var shareLib = window.plugins.socialsharing;
+     shareLib.share(data.message, null, data.image, data.link);
+   }
   }
 });
 

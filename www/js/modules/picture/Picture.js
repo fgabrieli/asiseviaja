@@ -7,6 +7,13 @@ asi.Picture = {
    // when a file is uploaded refresh the picture list
    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
     t.getPictures();
+    
+    var shareSrv = asi.Service.Share;
+    shareSrv.share({
+     message : 'Asi se viaja! Tome esta foto el ' + data.response.date + 'hs. Link para verla online: ',
+     link : data.response.serverUrl,
+     image : data.response.serverUrl
+    });
    });
   },
   getPictures : function() {
@@ -31,13 +38,13 @@ asi.Picture = {
       Event.fire(asi.evt.takePicture);
     };
 
-    $scope.share = function(picture) {
-      asiLog('$scope.share, message=', picture.caption, ', imageUrl=', picture.imageUrl);
-      Event.fire(asi.evt.share, {
-        message : picture.caption,
-        image : picture.imageUrl
-      });
-    };
+//    $scope.share = function(picture) {
+//      asiLog('$scope.share, message=', picture.caption, ', imageUrl=', picture.imageUrl);
+//      Event.fire(asi.evt.share, {
+//        message : picture.caption,
+//        image : picture.imageUrl
+//      });
+//    };
     
     Event.bind(asi.evt.pictureTaken, 'PictureModule', function(data) {
       asiLog('PictureModule catched pictureTaken, firing upload event');
