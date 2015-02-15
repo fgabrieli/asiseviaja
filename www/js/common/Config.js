@@ -1,6 +1,6 @@
 asi.Config = {
   isDebugEnabled : true,
-  serverUrl : 'http://192.168.137.1',
+  serverUrl : 'http://192.168.210.101',
   events : {
     takePicture : 'TakePicture',
     pictureTaken : 'PictureTaken',

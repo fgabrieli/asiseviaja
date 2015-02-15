@@ -17,6 +17,6 @@ define('UPLOAD_DIRECTORY', 'c:/home/asiseviaja/server/upload/');
 
 // Pictures URL
 
-define('PICTURE_URL', 'http://192.168.210.100/asiserver/upload');
+define('PICTURE_URL', 'http://192.168.210.101/asiserver/upload');
 
 ?>

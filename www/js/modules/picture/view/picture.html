@@ -1,27 +1,51 @@
 
-<div id="picture" class="clearfix" data-ng-controller="asi.Picture.ngController">
+<div class="clearfix" data-ng-controller="asi.Picture.ngController">
 
-  <div class="row" data-ng-repeat="picture in pictures" class="img-container">
+  <!-- List of pictures -->
 
-    <img src="{{picture.url}}" alt="" />
+  <div class="pictures">
+    <div data-ng-repeat="picture in pictures" class="img-container">
+      <div class="image" style="background-image: url('{{picture.url}}')"></div>
 
-    <div class="picture-info">
-      <div class="picture-fb-like">
-        <iframe
-          src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width=100&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=80&amp;appId=344578002380936"
-          scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 80px;" allowTransparency="true"></iframe>
+      <div class="info">
+        <div class="fb-like">
+          <iframe
+            src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width=100&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=80&amp;appId=344578002380936"
+            scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 80px;"
+            allowTransparency="true"></iframe>
+        </div>
+
+        <p>Foto tomada el {{picture.date}} hs.</p>
       </div>
 
-      <div class="date">Foto tomada el {{picture.date}} hs.</div>
-
-      <div class="share" data-ng-click="share(picture)"></div>
+      <!-- caption is disabled for now -->
+      <!-- <p class="caption">{{picture.caption}}</p> -->
     </div>
   </div>
+
+  <!--   <div id="right-col"> -->
+  <!--     <div data-ng-repeat="picture in pictures" class="img-container"> -->
+  <!--       <div data-ng-if="$odd"> -->
+  <!--         <img src="{{picture.url}}" alt="" /> -->
+
+  <!--         <div class="info"> -->
+  <!--           <div class="fb-like"> -->
+  <!--             <iframe -->
+  <!--               src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width=100&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=80&amp;appId=344578002380936" -->
+  <!--               scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 80px;" -->
+  <!--               allowTransparency="true"></iframe> -->
+  <!--           </div> -->
+
+  <!--           Foto tomada el {{picture.date}} hs. -->
+  <!--         </div> -->
+
+  <!--         caption is disabled for now -->
+  <!--         <p class="caption">{{picture.caption}}</p> -->
+  <!--       </div> -->
+  <!--     </div> -->
+  <!--   </div> -->
 
   <!-- Take a new picture -->
-  <div class="row" id="btn-shot" data-ng-click="takePicture()">
-    <div class="small-6 column">
-      <img src="js/modules/picture/view/img/shot.png" />
-    </div>
-  </div>
+
+  <div id="btn-shot" data-ng-click="takePicture()"></div>
 </div>

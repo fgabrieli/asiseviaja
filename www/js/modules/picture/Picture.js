@@ -7,13 +7,6 @@ asi.Picture = {
    // when a file is uploaded refresh the picture list
    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
     t.getPictures();
-    
-//    var shareSrv = asi.Service.Share;
-//    shareSrv.share({
-//     message : 'Asi se viaja! Tome esta foto el ' + data.response.date + 'hs. Link para verla online: ',
-//     link : data.response.serverUrl,
-//     image : data.response.serverUrl
-//    });
    });
   },
   getPictures : function() {

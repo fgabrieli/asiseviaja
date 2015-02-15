@@ -18,9 +18,8 @@
 <link href="css/modal.css" type="text/css" rel="stylesheet" />
 
 <!-- Module css -->
-<link href="js/modules/aboutus/view/css/aboutus.css" type="text/css" rel="stylesheet" />
-<link href="js/modules/picture/view/css/picture-preview.css" type="text/css" rel="stylesheet" />
-<link href="js/modules/picture/view/css/picture-preview-cel.css" type="text/css" rel="stylesheet" />
+<link href="js/modules/topmenu/view/css/topmenu.css" type="text/css" rel="stylesheet" />
+<link href="js/modules/picture/view/css/picture.css" type="text/css" rel="stylesheet" />
 
 <!-- Media specific styles -->
 
@@ -33,55 +32,10 @@
   <div id="container">
 
     <!-- Module views -->
-    <div class="module-view" data-ng-include="" data-src="'js/modules/aboutus/view/aboutus.html'"></div>
-    <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture-preview.html'"></div>
+    <div id="topmenu" class="module-view" data-ng-include="" data-src="'js/modules/topmenu/view/topmenu.html'"></div>
+    
+    <div id="picture" class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
 
-    <!-- Top menu -->
-    <div id="topmenu" data-ng-controller="asi.TopMenu.ngController">
-      <div id="gray-bar" class="clearfix">
-        <a id="btn-home" href="/asiseviaja"></a>
-        <ul id="btn-container" class="clearfix">
-          <li class="btn-header"><a data-ng-click="share()"> <img src="img/share.png" width="60" height="60" />
-          </a></li>
-          <li class="btn-header"><a data-ng-click="aboutUs()"> <img src="img/about.png" width="60" height="60" />
-          </a></li>
-        </ul>
-      </div>
-      <h1>ASI SE VIAJA</h1>
-    </div>
-
-    <div id="pictures" class="clearfix" data-ng-controller="asi.Picture.ngController">
-
-      <!-- List of pictures -->
-
-      <div id="left-col">
-        <div data-ng-repeat="picture in pictures" class="img-container">
-          <div data-ng-if="$even">
-            <img src="{{picture.url}}" alt="" />
-            <p class="date">Foto tomada el {{picture.date}} hs.</p>
-            
-            <!-- caption is disabled for now -->
-            <!-- <p class="caption">{{picture.caption}}</p> -->
-          </div>
-        </div>
-      </div>
-
-      <div id="right-col">
-        <div data-ng-repeat="picture in pictures" class="img-container">
-          <div data-ng-if="$odd">
-            <img src="{{picture.url}}" alt="" />
-            <p class="date">Foto tomada el {{picture.date}} hs.</p>
-            
-            <!-- caption is disabled for now -->
-            <!-- <p class="caption">{{picture.caption}}</p> -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Take a new picture -->
-
-      <div id="btn-shot" data-ng-click="takePicture()"></div>
-    </div>
   </div>
 
   <!-- External Libs -->
