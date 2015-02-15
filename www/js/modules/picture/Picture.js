@@ -8,12 +8,12 @@ asi.Picture = {
    Event.bind(asi.evt.fileUploaded, 'PictureModule', function(data) {
     t.getPictures();
     
-    var shareSrv = asi.Service.Share;
-    shareSrv.share({
-     message : 'Asi se viaja! Tome esta foto el ' + data.response.date + 'hs. Link para verla online: ',
-     link : data.response.serverUrl,
-     image : data.response.serverUrl
-    });
+//    var shareSrv = asi.Service.Share;
+//    shareSrv.share({
+//     message : 'Asi se viaja! Tome esta foto el ' + data.response.date + 'hs. Link para verla online: ',
+//     link : data.response.serverUrl,
+//     image : data.response.serverUrl
+//    });
    });
   },
   getPictures : function() {
@@ -38,13 +38,14 @@ asi.Picture = {
       Event.fire(asi.evt.takePicture);
     };
 
-//    $scope.share = function(picture) {
-//      asiLog('$scope.share, message=', picture.caption, ', imageUrl=', picture.imageUrl);
-//      Event.fire(asi.evt.share, {
-//        message : picture.caption,
-//        image : picture.imageUrl
-//      });
-//    };
+    $scope.share = function(picture) {
+     var shareSrv = asi.Service.Share;
+     shareSrv.share({
+      message : 'Asi se viaja! Tome esta foto el ' + picture.date + 'hs. Link para verla online: ',
+      link : picture.url, // XXX: change with url to website
+      image : picture.url
+     });
+    };
     
     Event.bind(asi.evt.pictureTaken, 'PictureModule', function(data) {
       asiLog('PictureModule catched pictureTaken, firing upload event');
