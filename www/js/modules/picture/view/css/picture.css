@@ -1,0 +1,66 @@
+.module-view.picture-module {
+  top: 150px;
+  position: absolute;
+  z-index: 1;
+}
+
+#picture .img-container {
+  margin-bottom: 10px;  
+}
+
+#picture .picture-fb-like {
+    text-align: center;
+    /* margin-bottom: 0px; */
+    /* margin: 0 auto; */
+    /* display: block; */
+    width: 60px;
+    /* position: relative; */
+    /* float: left; */
+    height: 30px;
+}
+
+#picture .date {
+  width: 100%;
+  /* float: left; */
+  height: 25px;
+  /* position: relative; */
+}
+
+#picture .picture-info {
+  background: #fa6d68;
+  color: #fff;
+  padding:10px;
+  position: relative;
+  margin: 0;
+}
+
+#picture .share {
+  background-image : url('../img/share.png');
+  width: 60px;
+  height: 60px;
+  /* right:  0px; */
+  left: calc(100% - 63px);
+  /* text-align: right; */
+  /* position: relative; */
+  /* margin: 0 auto; */
+  top: 7px;
+  top: px;
+  /* position: relative; */
+  position: absolute;
+  background-repeat: no-repeat;
+  /* float: left; */
+}
+
+#picture #btn-shot {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  /* margin-left: -114px; */
+  background-size: 80%;
+  width: 228px;
+  height: 228px;
+}
+
+#picture #btn-shot img {
+  width: 100%;
+}

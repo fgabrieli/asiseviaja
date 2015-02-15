@@ -1,0 +1,8 @@
+#topmenu .asi-bar-header {
+  background-color: transparent;
+  height: 44px;
+  background-position: left;
+  background-size: 88px;
+  /* background-repeat: repeat; */
+  background-image: url('../img/logo2.png');
+}
