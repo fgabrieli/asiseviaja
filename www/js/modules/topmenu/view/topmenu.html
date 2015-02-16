@@ -1,13 +1,13 @@
 
 <!-- Top menu -->
 <div data-ng-controller="asi.TopMenu.ngController">
-  <div class="bg-header"></div>
-  
-  <div class="logo"></div>
+  <div data-ng-switch data-on="getDevice()">
+    <div data-ng-switch-when="mobile">
+      <div data-ng-include="" data-src="'js/modules/topmenu/view/topmenu-mobile.html'"></div>
+    </div>
 
-  <div class="fb-like">
-    <iframe
-      src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width=100&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=80&amp;appId=344578002380936"
-      scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 80px;" allowTransparency="true"></iframe>
+    <div data-ng-switch-when="desktop">
+      <div data-ng-include="" data-src="'js/modules/topmenu/view/topmenu-desktop.html'"></div>
+    </div>
   </div>
 </div>

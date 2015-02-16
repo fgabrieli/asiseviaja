@@ -15,7 +15,11 @@ asi.Config = {
     deviceReady : 'DeviceReady',
     backKeyDown : 'BackKeyDown', // supported for: android
     showKeyboard : 'ShowKeyboard', // supported for: android
-    hidekeyboard : 'HideKeyboard' // supported for: android
+    hidekeyboard : 'HideKeyboard', // supported for: android
+    touchStart : 'TouchStart',
+    touchMove : 'TouchMove',
+    touchEnd : 'TouchEnd',
+    touchCancel : 'TouchCancel'
   },
 };
 

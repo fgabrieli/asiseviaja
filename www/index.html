@@ -19,7 +19,9 @@
 
 <!-- Module css -->
 <link href="js/modules/topmenu/view/css/topmenu.css" type="text/css" rel="stylesheet" />
+<link href="js/modules/topmenu/view/css/topmenu-mobile.css" type="text/css" rel="stylesheet" />
 <link href="js/modules/picture/view/css/picture.css" type="text/css" rel="stylesheet" />
+<link href="js/modules/picture/view/css/picture-mobile.css" type="text/css" rel="stylesheet" />
 
 <!-- Media specific styles -->
 
@@ -31,15 +33,13 @@
 <body data-ng-app="asiApp" class="clearfix">
   <div id="container">
 
-    <!-- Module views -->
+    <!-- Module views, order -->
     <div id="topmenu" class="module-view" data-ng-include="" data-src="'js/modules/topmenu/view/topmenu.html'"></div>
-    
-    <div id="picture" class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
 
+    <div id="picture" class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
   </div>
 
   <!-- External Libs -->
-
   <script type="text/javascript" src="js/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/libs/angular/1.2.26/angular.min.js"></script>
   <script type="text/javascript" src="js/libs/json2/1.0/json2.min.js"></script>
@@ -47,14 +47,21 @@
 
   <!-- App initialization -->
   <script type="text/javascript">
-      // Initialize angular app
-      var asiApp = angular.module('asiApp', []);
+   // Initialize angular app
+   var asiApp = angular.module('asiApp', []);
 
-      var asi = {};
-    </script>
+   var asi = {};
+  </script>
 
   <!-- Libraries -->
-  <script type="text/javascript" src="js/libs/propietary/event/1.0/Event.js"></script>
+  <script type="text/javascript" src="js/libs/nc/1.0/nc.js"></script>
+  <script type="text/javascript" src="js/libs/nc/1.0/Event.js"></script>
+  <script type="text/javascript" src="js/libs/nc/1.0/Util.js"></script>
+
+  <script>
+  // XXX: refactor Event to nc.Event everywhere
+  var Event = nc.Event;
+  </script>
 
   <script type="text/javascript" src="cordova.js"></script>
 
@@ -70,6 +77,7 @@
   <script type="text/javascript" src="js/service/Upload.js"></script>
   <script type="text/javascript" src="js/service/Camera.js"></script>
   <script type="text/javascript" src="js/service/PictureSrv.js"></script>
+  <script type="text/javascript" src="js/service/DeviceSrv.js"></script>
 
   <!-- Modules -->
   <script type="text/javascript" src="js/modules/picture/Picture.js"></script>

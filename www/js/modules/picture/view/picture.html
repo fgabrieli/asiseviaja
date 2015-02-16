@@ -1,12 +1,12 @@
 
-<div class="clearfix" data-ng-controller="asi.Picture.ngController">
-  <div data-ng-switch="" on="device">
+<div data-ng-controller="asi.Picture.ngController">
+  <div data-ng-switch data-on="getDevice()">
     <div data-ng-switch-when="mobile">
-      <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture-mobile.html'"></div>
+      <div data-ng-include="" data-src="'js/modules/picture/view/picture-mobile.html'"></div>
     </div>
 
     <div data-ng-switch-when="desktop">
-      <div class="module-view" data-ng-include="" data-src="'js/modules/picture/view/picture.html'"></div>
+      <div data-ng-include="" data-src="'js/modules/picture/view/picture-desktop.html'"></div>
     </div>
   </div>
 </div>

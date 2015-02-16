@@ -5,7 +5,7 @@
 }
 
 #picture {
-  padding: 20vh 20px 0px 20px;
+  padding: 26vh 20px 0px 20px;
   /*  position: relative; */
   z-index: 100;
 }
@@ -13,10 +13,10 @@
 #picture .img-container {
   margin-bottom: 15px;
   position: relative;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   float: left;
   margin-bottom: 30px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #picture .picture-fb-like {
@@ -31,14 +31,7 @@
 }
 
 #picture .image {
-  background-size: 100%;
-  /* height: 500px; */
-  /* width: 100%; */
-  /* height: 100%; */
-  min-height: 500px;
-  /* max-height: 500px; */
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  width: 300px;
 }
 
 #picture .share {
@@ -113,7 +106,7 @@
   /* float: left; */
   position: relative;
   /* left: 15px; */
-  width: 760px;
+  /* width: 760px; */
   /* width: 90%; */
   margin: 0 auto;
   /* max-height: 1000px; */
@@ -128,34 +121,4 @@
 
 #right-col {
   margin-left: 10px;
-}
-
-/* samsung galaxy s4 mini */
-@media screen and (max-width: 360px) {
-  #picture {
-    padding: 210px 20px 0px 20px;
-  }
-  #picture #btn-shot {
-    position: fixed;
-    background-repeat: no-repeat;
-    background-image: url('../img/shot.png');
-    background-size: 80%;
-    width: 114px;
-    height: 114px;
-  }
-}
-
-/* samsung galaxy s3 */
-@media only screen and (max-device-width: 720px) and (orientation:portrait) {
-}
-
-/* samsung galaxy s4 */
-@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-}
-
-/* desktop */
-@media screen and (min-width: 1024px) {
-  #picture #btn-shot {
-    display: none;
-  }
 }

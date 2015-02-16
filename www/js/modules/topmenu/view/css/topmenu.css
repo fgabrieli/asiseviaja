@@ -39,6 +39,9 @@
 
 /* samsung galaxy s4 mini */
 @media screen and (max-width: 360px) {
+  #topmenu {
+    position: fixed;
+  }
   #topmenu .logo {
     position: relative;
     float: left;
@@ -52,16 +55,14 @@
     top: 0px;
     background-color: white;
   }
-}
-
-/* samsung galaxy s3 */
-@media only screen and (max-device-width: 720px) and (orientation:portrait) {
-}
-
-/* samsung galaxy s4 */
-@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-}
-
-/* desktop */
-@media screen and (min-width: 1024px) {
+  #topmenu .fb-like {
+    position: relative;
+    float: left;
+    top: 0vh;
+    padding-top: 2vh;
+    height: 8vh;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+  }
 }
