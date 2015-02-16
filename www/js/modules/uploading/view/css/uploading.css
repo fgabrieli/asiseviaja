@@ -1,0 +1,22 @@
+#uploading {
+  display: none;
+}
+
+body.uploading-picture {
+  opacity: 0.5;
+}
+
+body.uploading-picture #uploading {
+  display: block;
+}
+
+#uploading .text {
+  display: block;
+  margin-top: 20vh;
+  color: black;
+  font-weight: bold;
+  left: 18vw;
+  font-size: 36px;
+  position: absolute;
+  top: 20vh;
+}

@@ -1,0 +1,13 @@
+
+<!-- Top menu -->
+<div data-ng-controller="asi.TopMenu.ngController">
+  <div data-ng-switch data-on="getDevice()">
+    <div data-ng-switch-when="mobile">
+      <div data-ng-include="" data-src="'js/modules/topmenu/view/topmenu-mobile.html'"></div>
+    </div>
+
+    <div data-ng-switch-when="desktop">
+      <div data-ng-include="" data-src="'js/modules/topmenu/view/topmenu-desktop.html'"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+/* samsung galaxy s4 mini */
+@media screen and (max-width: 360px) {
+  #picture {
+    padding: 210px 20px 0px 20px;
+  }
+  #picture .pictures {
+    width: 300px;
+  }
+  #picture #btn-shot {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/shot.png');
+    background-size: 100%;
+    width: 34vw;
+    height: 19vh;
+    right: -1px;
+    left: 82vw;
+    left: 80%;
+  }
+  #picture .img-container {
+    margin-bottom: 15px;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+    margin-bottom: 30px;
+    width: 300px;
+  }
+  #picture .image {
+    width: 300px;
+  }
+  #picture .info {
+    width: 300px;
+  }
+  #picture .share {
+    top: 15px;
+    background-image: url('../img/share.png');
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+  }
+  
+  #picture .info p {
+    float: left;  
+  }
+}
+
+/* samsung galaxy s3 */
+@media only screen and (max-device-width: 720px) and (orientation:portrait) {
+}
+
+/* samsung galaxy s4 */
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  #picture #btn-shot {
+    display: none;
+  }
+}

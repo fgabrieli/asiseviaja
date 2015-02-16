@@ -1,0 +1,68 @@
+#topmenu {
+  /* position: fixed; */
+  width: 100%;
+}
+
+#topmenu .bg-header {
+  background-image: url('../img/bg-header.png');
+  width: 100%;
+  /* float: left; */
+  height: 2vh;
+  position: relative;
+}
+
+#topmenu .logo {
+  position: relative;
+  /* float: left; */
+  background-image: url('../img/ticket1.png');
+  background-size: 45vh;
+  height: 15vh;
+  width: 25vw;
+  top: 2vh;
+  /* margin-top: 5px; */
+  top:;
+  margin: 0 auto;
+  /* width: 100%; */
+  background-repeat: no-repeat;
+}
+
+#topmenu .fb-like {
+  position: relative;
+  float: left;
+  top: 3vh;
+  height: 6.5vh;
+  /* padding-top: 2vh; */
+  width: 100%;
+  /* background-color: white; */
+  text-align: center;
+}
+
+/* samsung galaxy s4 mini */
+@media screen and (max-width: 360px) {
+  #topmenu {
+    position: fixed;
+  }
+  #topmenu .logo {
+    position: relative;
+    float: left;
+    padding-top: 1vh;
+    background-image: url('../img/ticket1-360x640.png');
+    background-size: 360px;
+    height: 19vh;
+    background-position: center 1vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    top: 0px;
+    background-color: white;
+  }
+  #topmenu .fb-like {
+    position: relative;
+    float: left;
+    top: 0vh;
+    padding-top: 2vh;
+    height: 8vh;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+  }
+}

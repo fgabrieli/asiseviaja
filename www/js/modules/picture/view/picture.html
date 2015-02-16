@@ -1,0 +1,12 @@
+
+<div data-ng-controller="asi.Picture.ngController">
+  <div data-ng-switch data-on="getDevice()">
+    <div data-ng-switch-when="mobile">
+      <div data-ng-include="" data-src="'js/modules/picture/view/picture-mobile.html'"></div>
+    </div>
+
+    <div data-ng-switch-when="desktop">
+      <div data-ng-include="" data-src="'js/modules/picture/view/picture-desktop.html'"></div>
+    </div>
+  </div>
+</div>
