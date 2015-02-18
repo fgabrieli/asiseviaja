@@ -17,6 +17,6 @@ body.uploading-picture #uploading {
   font-weight: bold;
   left: 18vw;
   font-size: 36px;
-  position: absolute;
+  position: fixed;
   top: 20vh;
 }

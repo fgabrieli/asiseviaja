@@ -76,7 +76,7 @@ asi.Picture = {
     $scope.share = function(picture) {
      var shareSrv = asi.Service.Share;
      shareSrv.share({
-      message : 'Asi se viaja! Tome esta foto el ' + picture.date + 'hs. Link para verla online: ',
+      message : '\nAsi se viaja! Tome esta foto el ' + picture.date + 'hs.\nLink para verla online: ',
       link : picture.url, // XXX: change with url to website
       image : picture.url
      });
