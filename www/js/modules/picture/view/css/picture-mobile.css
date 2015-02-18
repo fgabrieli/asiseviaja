@@ -1,11 +1,13 @@
 /* samsung galaxy s4 mini */
 @media screen and (max-width: 360px) {
   #picture {
-    padding: 210px 20px 0px 20px;
+    padding: 150px 20px 0px 20px;
   }
   #picture .pictures {
     width: 300px;
-  }
+  
+    height: 100%;
+}
   #picture #btn-shot {
     position: fixed;
     background-repeat: no-repeat;
@@ -24,18 +26,24 @@
     float: left;
     margin-bottom: 30px;
     width: 300px;
-  }
+  
+}
   #picture .image {
     width: 300px;
-  }
+  
+    border-radius: 15px 15px 0px 0px;
+}
   #picture .info {
     width: 300px;
-  }
+  
+    height: 70px;
+}
   #picture .share {
-    top: 15px;
+    /* top: 15px; */
     background-image: url('../img/share.png');
     width: 60px;
     height: 60px;
+    top: 5px;
     background-repeat: no-repeat;
   }
   
