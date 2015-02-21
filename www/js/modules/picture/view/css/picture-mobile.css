@@ -5,9 +5,8 @@
   }
   #picture .pictures {
     width: 300px;
-  
     height: 100%;
-}
+  }
   #picture #btn-shot {
     position: fixed;
     background-repeat: no-repeat;
@@ -18,6 +17,7 @@
     right: -1px;
     left: 82vw;
     left: 80%;
+    background-position: center center;
   }
   #picture .img-container {
     margin-bottom: 15px;
@@ -26,18 +26,15 @@
     float: left;
     margin-bottom: 30px;
     width: 300px;
-  
-}
+  }
   #picture .image {
     width: 300px;
-  
     border-radius: 15px 15px 0px 0px;
-}
+  }
   #picture .info {
     width: 300px;
-  
     height: 70px;
-}
+  }
   #picture .share {
     /* top: 15px; */
     background-image: url('../img/share.png');
@@ -46,23 +43,60 @@
     top: 5px;
     background-repeat: no-repeat;
   }
-  
   #picture .info p {
-    float: left;  
+    float: left;
   }
 }
 
-/* samsung galaxy s3 */
-@media only screen and (max-device-width: 720px) and (orientation:portrait) {
-}
-
-/* samsung galaxy s4 */
-@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-}
-
-/* desktop */
-@media screen and (min-width: 1024px) {
+/* samsung galaxy s4 mini */
+@media screen and (max-width: 480px) {
+  #picture {
+    padding: 150px 20px 0px 15px;
+  }
+  #picture .pictures {
+    width: 290px;
+    height: 100%;
+  }
   #picture #btn-shot {
-    display: none;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/shot.png');
+    background-size: 100%;
+    width: 34vw;
+    background-position: center center;
+    height: 19vh;
+    right: -1px;
+    left: 82vw;
+    /* top: 700px; */
+    left: 80%;
+    top: 80%;
+  }
+  #picture .img-container {
+    margin-bottom: 15px;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+    margin-bottom: 30px;
+    width: 290px;
+  }
+  #picture .image {
+    width: 290px;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #picture .info {
+    width: 290px;
+    height: 70px;
+  }
+  #picture .share {
+    /* top: 15px; */
+    background-image: url('../img/share.png');
+    width: 60px;
+    height: 60px;
+    top: 5px;
+    background-repeat: no-repeat;
+  }
+  #picture .info p {
+    float: left;
+    width: 215px;
   }
 }

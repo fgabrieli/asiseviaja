@@ -11,21 +11,31 @@
     padding-top: 1vh;
     background-image: url('../img/ticket1-360x640.png');
     background-size: 360px;
-    height: 19vh;
+    height: 130px;
     background-position: center 1vh;
     width: 100%;
     background-repeat: no-repeat;
     top: 0px;
     background-color: white;
   }
-  #topmenu .fb-like {
+}
+
+/* samsung galaxy s2 */
+@media screen and (max-width: 480px) {
+  #topmenu {
+    position: fixed;
+  }
+  #topmenu .logo {
     position: relative;
     float: left;
-    top: 0vh;
-    padding-top: 2vh;
-    height: 8vh;
-    background-color: white;
+    padding-top: 1vh;
+    background-image: url('../img/ticket1-480x800.png');
+    background-size: 360px;
+    height: 130px;
+    background-position: center 1vh;
     width: 100%;
-    text-align: center;
+    background-repeat: no-repeat;
+    top: 0px;
+    background-color: white;
   }
 }
