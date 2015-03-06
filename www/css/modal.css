@@ -1,9 +1,0 @@
-.asi-modal {
-  position: fixed;
-  width: 70%;
-  left: 15%; /* 70 / 2 / 2 */
-  height: auto;
-  height: 70%;
-  top: 15%;/* 70 / 2 / 2 */
-  background-color: #ccc;
-}

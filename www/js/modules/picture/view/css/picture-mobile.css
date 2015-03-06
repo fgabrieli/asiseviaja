@@ -1,4 +1,4 @@
-/* galaxy s4 */
+/* s4 mini, mdpi */
 @media screen and (device-width: 360px) and (device-height: 640px) {
   #picture {
     padding: 150px 20px 0px 20px;
@@ -11,12 +11,13 @@
     position: fixed;
     background-repeat: no-repeat;
     background-image: url('../img/shot.png');
-    background-size: 100%;
+    background-size: 80%;
     width: 34vw;
     height: 19vh;
     right: -1px;
+    top: 510px;
     left: 82vw;
-    left: 80%;
+    left: 255px;
     background-position: center center;
   }
   #picture .img-container {
@@ -35,72 +36,21 @@
     height: 70px;
   }
   #picture .share {
-    /* top: 15px; */
+    top: 15px;
     background-image: url('../img/share.png');
     width: 60px;
     height: 60px;
-    /* top: 10px; */
-    margin-top: 5px;
-    background-repeat: no-repeat;
-  }
-  #picture .info p {
-    float: left;
-  }
-  picture .date {
-    
-  }
-}
-
-/* s4 mini */
-@media screen and (device-width: 360px) and (device-height: 640px) {
-  #picture {
-    padding: 150px 20px 0px 20px;
-  }
-  #picture .pictures {
-    width: 300px;
-    height: 100%;
-  }
-  #picture #btn-shot {
-    position: fixed;
-    background-repeat: no-repeat;
-    background-image: url('../img/shot.png');
-    background-size: 100%;
-    width: 34vw;
-    height: 19vh;
-    right: -1px;
-    left: 82vw;
-    left: 80%;
-    background-position: center center;
-  }
-  #picture .img-container {
-    margin-bottom: 15px;
-    position: relative;
+    top: 10px;
     margin: 0 auto;
-    float: left;
-    margin-bottom: 30px;
-    width: 300px;
-  }
-  #picture .image {
-    width: 300px;
-  }
-  #picture .info {
-    width: 300px;
-    height: 70px;
-  }
-  #picture .share {
-    /* top: 15px; */
-    background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
-    /* top: 10px; */
     margin-top: 5px;
+    margin-bottom: 5px;
     background-repeat: no-repeat;
   }
   #picture .info p {
     float: left;
-  }
-  picture .date {
-    
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -108,14 +58,15 @@
 @media screen and (device-width: 540px) and (device-height: 960px) {
   #picture {
     padding: 160px 0 0px 0px;
-    /* left: 0px; */
+    left: 0px;
     height: 100%;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
   #picture .pictures {
-    /* width: 300px; */
+    width: 500px;
     height: 100%;
+    margin: 0 auto;
     position: relative;
   }
   #picture #btn-shot {
@@ -125,7 +76,7 @@
     background-size: 100%;
     width: 34vw;
     height: 18vh;
-    /* right: -1px; */
+    right: -1px;
     left: 82vw;
     left: 77%;
     background-position: center center;
@@ -134,10 +85,18 @@
     margin-bottom: 15px;
     position: relative;
     display: table;
-  }
+  
+    margin: 0 auto;
+    padding-bottom: 15px;
+    /* width: 500px; */
+    /* max-width: 540px; */
+}
   #picture .image {
+    max-width: 500px;
     
-  }
+  
+    /* margin: 0 auto; */
+}
   #picture .info {
     
   }
@@ -146,16 +105,17 @@
     background-image: url('../img/share.png');
     width: 60px;
     height: 60px;
-    /* left: 86%; */
+    left: 86%;
+    margin: 0 auto;
     margin-top: 10px;
     background-repeat: no-repeat;
   }
   #picture .info p {
-    /* float: left; */
-    /* left: 10px; */
-    /* white-space: nowrap; */
+    float: left;
+    left: 10px;
+    white-space: nowrap;
     left: 1;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-size: 15px;
     padding: 10px;
     top: 3px;
@@ -163,14 +123,18 @@
   }
 }
 
-/* generic mdpi */
-@media screen and (device-width: 320px) and (device-height: 480px) {
+/* galaxy s4 xxhdpi */
+@media screen and (device-width: 1080px) and (device-height: 1920px) {
   #picture {
-    padding: 150px 20px 0px 10px;
-  }
+    padding: 320px 20px 0px 20px;
+  
+    width: 100%;
+}
   #picture .pictures {
-    width: 300px;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+    margin: 0 auto;
+    /* position: relative; */
   }
   #picture #btn-shot {
     position: fixed;
@@ -178,90 +142,55 @@
     background-image: url('../img/shot.png');
     background-size: 100%;
     width: 34vw;
-    height: 21vh;
+    height: 19vh;
     right: -1px;
     left: 82vw;
-    left: 83%;
+    left: 80%;
     background-position: center center;
   }
   #picture .img-container {
-    margin-bottom: 15px;
-    position: relative;
-    margin: 0 auto;
-    float: left;
-    margin-bottom: 30px;
-    width: 300px;
+    /* margin-bottom: 15px; */
+    /* position: relative; */
+    /* margin: 0 auto; */
+    /* float: left; */
+    padding-bottom: 15px;
+    /* margin-bottom: 30px; */
+    /* min-width: 300px; */
   }
   #picture .image {
-    width: 300px;
-  }
+    /* max-width: 1080px; */
+    /* min-width: 576px; */
+  
+    max-width: 950px;
+    max-height: 1500px;
+}
   #picture .info {
-    width: 300px;
-    height: 70px;
+    /* width: 300px; */
+    /* height: 100px; */
+
+    /* width: auto; */
+    /* max-width: 1080px; */
   }
   #picture .share {
-    top: 15px;
+    /* top: 15px; */
     background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
-    top: 5px;
-    background-repeat: no-repeat;
-  }
-  #picture .info p {
-    float: left;
-  }
-}
-
-/* generic hdpi */
-@media screen and (device-width: 480px) and (device-height: 720px) {
-  #picture {
-    padding: 150px 20px 0px 10px;
-  }
-  #picture .pictures {
-    width: 300px;
-    height: 100%;
-  }
-  #picture #btn-shot {
-    position: fixed;
-    background-repeat: no-repeat;
-    background-image: url('../img/shot.png');
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
     background-size: 100%;
-    width: 34vw;
-    height: 21vh;
-    right: -1px;
-    left: 82vw;
-    left: 83%;
-    background-position: center center;
-  }
-  #picture .img-container {
-    margin-bottom: 15px;
-    position: relative;
-    margin: 0 auto;
-    float: left;
-    margin-bottom: 30px;
-    width: 300px;
-  }
-  #picture .image {
-    width: 300px;
-  }
-  #picture .info {
-    width: 300px;
-    height: 70px;
-  }
-  #picture .share {
-    top: 15px;
-    background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
-    top: 5px;
+    /* top: 10px; */
+    margin-bottom: 10px;
+    margin-top: 10px;
     background-repeat: no-repeat;
   }
   #picture .info p {
-    float: left;
+    /* float: left; */
+    font-size: 30px;
+    width: 100%;
+    width: 100%;
   }
 }
 
-/* generic xhdpi */
-@media screen and (device-width: 320px) and (device-height: 480px) {
-}
+/* galaxy s4 xhdpi */
+@media screen and (device-width: 720px) and (device-height: 1280px) {
 }

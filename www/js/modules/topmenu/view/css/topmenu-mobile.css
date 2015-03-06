@@ -54,6 +54,7 @@
   #topmenu {
     position: fixed;
   
+    z-index: 100;
 }
   #topmenu .logo {
     position: absolute;

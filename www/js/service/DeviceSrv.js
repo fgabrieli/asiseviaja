@@ -36,19 +36,12 @@ asi.Service.DeviceSrv = $.extend(true, {}, asi.Service, {
   });
  },
  // public
- getDevice : function() {
+ getDeviceType : function() {
   return this.device;
  },
  // private
  detect : function() {
-  var t = this;
-  
-  var screenWidth = screen.width;
-  if (screenWidth >= 1024) {
-   t.device = t.DEVICE_DESKTOP;
-  } else {
-   t.device = t.DEVICE_MOBILE;
-  }
+  this.device = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? this.DEVICE_MOBILE : this.DEVICE_DESKTOP;
  }
 });
 

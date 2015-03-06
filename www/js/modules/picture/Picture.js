@@ -31,7 +31,7 @@ asi.Picture = {
     
     $scope.isScrolling = false;
     var deviceSrv = asi.Service.DeviceSrv;
-    var isMobile = (deviceSrv.getDevice() == 'mobile');
+    var isMobile = (deviceSrv.getDeviceType() == 'mobile');
     if (isMobile) {
      bindScrollEvents();
     }
@@ -93,7 +93,7 @@ asi.Picture = {
     
     $scope.getDevice = function() {
      var deviceSrv = asi.Service.DeviceSrv;
-     return deviceSrv.getDevice();
+     return deviceSrv.getDeviceType();
     }
   }
 };
