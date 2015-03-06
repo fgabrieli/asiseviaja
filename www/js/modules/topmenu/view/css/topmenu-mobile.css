@@ -1,7 +1,78 @@
 /* overrides default styles from topmenu.css for mobile devices */
 
+/* samsung galaxy s4 */
+@media screen and (device-width: 1080px) and (device-height: 1920px) {
+  #topmenu {
+    position: fixed;
+  }
+  #topmenu .logo {
+    position: relative;
+    float: left;
+    border: 1px solid #003366;
+    height: 260px;
+    width: 1080px;
+    padding-top: 1vh;
+    /* height: 640px; */
+    background-image: url('../img/logo-1080x1920.png');
+    background-size: 1080px;
+    /* height: 130px; */
+    background-position: center 1vh;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    top: 0px;
+    /* background-color: white; */
+  }
+}
+
+
 /* samsung galaxy s4 mini */
-@media screen and (max-width: 360px) {
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  #topmenu {
+    position: fixed;
+  }
+  #topmenu .logo {
+    position: relative;
+    float: left;
+    border: 1px solid #003366;
+    height: 130px;
+    width: 360px;
+    padding-top: 1vh;
+    /* height: 640px; */
+    background-image: url('../img/logo-360x640.png');
+    background-size: 360px 130px;
+    /* height: 130px; */
+    background-position: center 1vh;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    top: 0px;
+    /* background-color: white; */
+  }
+}
+
+/* s4 mini, hdpi */
+@media screen and (device-width: 540px) and (device-height: 960px) {
+  #topmenu {
+    position: fixed;
+  
+}
+  #topmenu .logo {
+    position: absolute;
+    float: left;
+    padding-top: 1vh;
+    background-image: url('../img/logo-540x960.png');
+    background-size: 540px;
+    border: 1px solid #003366;
+    height: 130px;
+    background-position: center 1vh;
+    width: 540px;
+    background-repeat: no-repeat;
+    top: 18px;
+    /* background-color: white; */
+  }
+}
+
+/* generic mdpi */
+@media screen and (device-width: 320px) and (device-height: 480px) {
   #topmenu {
     position: fixed;
   }
@@ -9,7 +80,7 @@
     position: relative;
     float: left;
     padding-top: 1vh;
-    background-image: url('../img/ticket1-360x640.png');
+    background-image: url('../img/logo-320x534.png');
     background-size: 360px;
     height: 130px;
     background-position: center 1vh;
@@ -20,22 +91,10 @@
   }
 }
 
-/* samsung galaxy s2 */
-@media screen and (max-width: 480px) {
-  #topmenu {
-    position: fixed;
-  }
-  #topmenu .logo {
-    position: relative;
-    float: left;
-    padding-top: 1vh;
-    background-image: url('../img/ticket1-480x800.png');
-    background-size: 360px;
-    height: 130px;
-    background-position: center 1vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    top: 0px;
-    background-color: white;
-  }
+/* generic hdpi */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+}
+
+/* generic xhdpi */
+@media screen and (device-width: 320px) and (device-height: 480px) {
 }

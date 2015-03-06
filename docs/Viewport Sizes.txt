@@ -1,0 +1,108 @@
+
+dpi = ( square_root ( horizontal_pixels ^ 2 + vertical_pixels ^ 2 )) / ( screen_size )
+
+A set of six generalized densities:
+	ldpi (low) ~120dpi
+	mdpi (medium) ~160dpi
+	hdpi (high) ~240dpi
+	xhdpi (extra-high) ~320dpi
+	xxhdpi (extra-extra-high) ~480dpi
+	xxxhdpi (extra-extra-extra-high) ~640dpi
+
+
+Base density is mdpi = 320 x 480
+
+ldpi = mdpi * 0.75 = 240 x 360
+mdpi = mdpi (base) = 320 x 480
+hdpi = mdpi * 1.5 = 480 x 720
+xxhdpi = mdpi * 3
+xxxhdpi = mdpi * 4
+
+/*
+xlarge screens are at least 960dp x 720dp (xhdpi)
+large screens are at least 640dp x 480dp (hdpi)
+normal screens are at least 470dp x 320dp (mdpi)
+small screens are at least 426dp x 320dp (ldpi)
+*/
+
+Model                   | Android Version | Density
+Advent Vega             |      2.2        |  mdpi
+  
+Amazon Fire TV          |      4.2        |  xhdpi
+ 
+Asus Transformer Prime  |      4.0        |  hdpi
+ 
+Freelander PD10         |      4.0        |  hdpi
+ 
+Google Galaxy Nexus     |      4.0        |  xhdpi
+Google Nexus One        |      2.3        |  hdpi
+Google Nexus S          |      4.0        |  hdpi
+Google Nexus 4          |      4.2        |  xhdpi
+Google Nexus 7          |      4.1        |  tvdpi (but will scale down your hdpi assets)
+Google Nexus 10         |      4.2        |  xhdpi (Launcher icon xxhdpi)
+ 
+HTC Desire              |      2.2        |  hdpi
+HTC Desire S            |      2.3        |  hdpi
+HTC Desire X            |      4.0        |  hdpi
+HTC Desire HD           |      2.3        |  hdpi
+HTC Doubleshot          |      2.3        |  hdpi
+HTC Glacier             |      2.3        |  hdpi
+HTC Nexus One           |      2.3        |  hdpi
+HTC Hero                |      2.1        |  mdpi
+HTC Legend              |      2.1        |  mdpi
+HTC Sensation           |      2.3        |  hdpi
+HTC One                 |      4.2        |  xhdpi
+HTC One S               |      4.0        |  hdpi
+HTC One X               |      4.0        |  xhdpi
+HTC One X+              |      4.1        |  xhdpi
+HTC One V               |      4.0        |  hdpi
+HTC Tattoo              |      1.6        |  ldpi
+HTC Wildfire            |      2.1/2.2    |  mdpi
+ 
+Huawei Blaze            |      2.3        |  mdpi
+ 
+LG Nexus 4              |      4.2        |  xhdpi
+LG Optimus S            |      2.2        |  mdpi
+LG Optimus Sol          |      2.3        |  hdpi
+LG Optimus One          |      2.2        |  mdpi
+LG Optimus V            |      2.2        | mdpi
+LG Optimus 3D           |      2.3        |  hdpi
+ 
+Motorola Atrix          |      2.3        |  hdpi
+Motorola Defy           |      2.3        |  hdpi
+Motorola Defy Mini      |      2.3        |  mdpi
+Motorola Droid          |      2.0-2.2    |  mdpi
+Motorola Droid 3        |      2.3        | hdpi
+Motorola Flipout        |      2.1        |  ldpi
+Motorola Razr           |      2.3        |  hdpi
+Motorola Xoom           |      3.1/4.0    |  mdpi
+Motorola Xoom2          |      3.2        |  mdpi
+ 
+Sony X10 Mini           |      2.1        |  ldpi
+Sony X10i               |      2.3        |  hdpi
+Sony Xperia Arc S       |      2.3        |  hdpi
+Sony Xperia P           |      2.3        |  hdpi
+Sony Xperia Play        |      2.3        |  hdpi
+Sony Xperia Pro         |      4.0        |  hdpi
+Sony Xperia S           |      2.3        |  xhdpi
+Sony Xperia X8          |      2.1        |  mdpi
+Sony Xperia Z           |      4.2        |  xxhdpi
+ 
+Samsung Epic 4G         |      2.2        |  hdpi
+Samsung Galaxy Ace      |      2.2        |  mdpi
+Samsung Galaxy S        |      2.3        |  hdpi
+Samsung Galaxy S II     |      2.3        |  hdpi
+Samsung Galaxy S III    |      4.0        |  xhdpi
+Samsung Galaxy S 4      |      4.2        |  xhdpi
+Samsung Galaxy S 4 Active |      4.2        |  xhdpi
+Samsung Galaxy Tab 7"   |      2.2        |  hdpi
+Samsung Galaxy Tab 10"  |      3.0        |  mdpi
+Samsung Galaxy Tab 2 10"|      4.0        |  mdpi 
+Samsung Galaxy Nexus    |      4.0        |  xhdpi
+Samsung Galaxy Note     |      2.3        |  xhdpi
+Samsung Galaxy Note 2   |      4.1        |  xhdpi
+Samsung Nexus 10        |      4.2        |  xhdpi
+Samsung Nexus S         |      4.0        |  hdpi
+ 
+ZTE Blade               |      2.3        |  hdpi
+ZTE Libra               |      2.2        |  hdpi

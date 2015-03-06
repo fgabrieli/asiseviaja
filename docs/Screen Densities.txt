@@ -1,0 +1,7 @@
+
+	
+Screen density, as defined by the reference material is:
+
+The quantity of pixels within a physical area of the screen; usually referred to as dpi (dots per inch). For example, a "low" density screen has fewer pixels within a given physical area, compared to a "normal" or "high" density screen. For simplicity, Android groups all actual screen densities into four generalized densities: low, medium, high, and extra high.
+
+low = 120dpi med = 160dpi high = 240dpi xhi = 320dpi

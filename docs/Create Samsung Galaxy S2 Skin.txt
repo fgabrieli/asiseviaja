@@ -1,0 +1,19 @@
+Do the following to create the Samsung Galaxy S2 skin:
+
+1. Download the skin from the Samsung page (follow the link posted by anshumans)
+
+2. Go to directory [Android-SDK directory]/platforms/android-10/skins
+
+3. Create a new directory named GALAXY_S2
+
+4. Extract all files from the downloaded ZIP file to the new directory
+
+5. Edit the file manifest.ini and change the line api=9 to api=10
+
+6. Start the AVD and click "New..."
+
+7. Under Target select "Android 2.3.3 - API Level 10"
+
+8. Under Skin choose "GALAXY_S2" from the dropdown list
+
+9. Click "Create AVD"

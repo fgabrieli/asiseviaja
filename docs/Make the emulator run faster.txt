@@ -1,0 +1,5 @@
+
+http://stackoverflow.com/questions/2662650/making-the-android-emulator-run-faster
+
+8,58
+

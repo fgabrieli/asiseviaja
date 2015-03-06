@@ -1,5 +1,5 @@
-/* samsung galaxy s4 mini */
-@media screen and (max-width: 360px) {
+/* galaxy s4 */
+@media screen and (device-width: 360px) and (device-height: 640px) {
   #picture {
     padding: 150px 20px 0px 20px;
   }
@@ -29,7 +29,6 @@
   }
   #picture .image {
     width: 300px;
-    border-radius: 15px 15px 0px 0px;
   }
   #picture .info {
     width: 300px;
@@ -37,6 +36,171 @@
   }
   #picture .share {
     /* top: 15px; */
+    background-image: url('../img/share.png');
+    width: 60px;
+    height: 60px;
+    /* top: 10px; */
+    margin-top: 5px;
+    background-repeat: no-repeat;
+  }
+  #picture .info p {
+    float: left;
+  }
+  picture .date {
+    
+  }
+}
+
+/* s4 mini */
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  #picture {
+    padding: 150px 20px 0px 20px;
+  }
+  #picture .pictures {
+    width: 300px;
+    height: 100%;
+  }
+  #picture #btn-shot {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/shot.png');
+    background-size: 100%;
+    width: 34vw;
+    height: 19vh;
+    right: -1px;
+    left: 82vw;
+    left: 80%;
+    background-position: center center;
+  }
+  #picture .img-container {
+    margin-bottom: 15px;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+    margin-bottom: 30px;
+    width: 300px;
+  }
+  #picture .image {
+    width: 300px;
+  }
+  #picture .info {
+    width: 300px;
+    height: 70px;
+  }
+  #picture .share {
+    /* top: 15px; */
+    background-image: url('../img/share.png');
+    width: 60px;
+    height: 60px;
+    /* top: 10px; */
+    margin-top: 5px;
+    background-repeat: no-repeat;
+  }
+  #picture .info p {
+    float: left;
+  }
+  picture .date {
+    
+  }
+}
+
+/* s4 mini, hdpi */
+@media screen and (device-width: 540px) and (device-height: 960px) {
+  #picture {
+    padding: 160px 0 0px 0px;
+    /* left: 0px; */
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+  }
+  #picture .pictures {
+    /* width: 300px; */
+    height: 100%;
+    position: relative;
+  }
+  #picture #btn-shot {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/shot.png');
+    background-size: 100%;
+    width: 34vw;
+    height: 18vh;
+    /* right: -1px; */
+    left: 82vw;
+    left: 77%;
+    background-position: center center;
+  }
+  #picture .img-container {
+    margin-bottom: 15px;
+    position: relative;
+    display: table;
+  }
+  #picture .image {
+    
+  }
+  #picture .info {
+    
+  }
+  #picture .share {
+    top: 15px;
+    background-image: url('../img/share.png');
+    width: 60px;
+    height: 60px;
+    /* left: 86%; */
+    margin-top: 10px;
+    background-repeat: no-repeat;
+  }
+  #picture .info p {
+    /* float: left; */
+    /* left: 10px; */
+    /* white-space: nowrap; */
+    left: 1;
+    /* overflow: hidden; */
+    font-size: 15px;
+    padding: 10px;
+    top: 3px;
+    position: relative;
+  }
+}
+
+/* generic mdpi */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+  #picture {
+    padding: 150px 20px 0px 10px;
+  }
+  #picture .pictures {
+    width: 300px;
+    height: 100%;
+  }
+  #picture #btn-shot {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/shot.png');
+    background-size: 100%;
+    width: 34vw;
+    height: 21vh;
+    right: -1px;
+    left: 82vw;
+    left: 83%;
+    background-position: center center;
+  }
+  #picture .img-container {
+    margin-bottom: 15px;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+    margin-bottom: 30px;
+    width: 300px;
+  }
+  #picture .image {
+    width: 300px;
+  }
+  #picture .info {
+    width: 300px;
+    height: 70px;
+  }
+  #picture .share {
+    top: 15px;
     background-image: url('../img/share.png');
     width: 60px;
     height: 60px;
@@ -48,13 +212,13 @@
   }
 }
 
-/* samsung galaxy s4 mini */
-@media screen and (max-width: 480px) {
+/* generic hdpi */
+@media screen and (device-width: 480px) and (device-height: 720px) {
   #picture {
-    padding: 150px 20px 0px 15px;
+    padding: 150px 20px 0px 10px;
   }
   #picture .pictures {
-    width: 290px;
+    width: 300px;
     height: 100%;
   }
   #picture #btn-shot {
@@ -63,13 +227,11 @@
     background-image: url('../img/shot.png');
     background-size: 100%;
     width: 34vw;
-    background-position: center center;
-    height: 19vh;
+    height: 21vh;
     right: -1px;
     left: 82vw;
-    /* top: 700px; */
-    left: 80%;
-    top: 80%;
+    left: 83%;
+    background-position: center center;
   }
   #picture .img-container {
     margin-bottom: 15px;
@@ -77,18 +239,17 @@
     margin: 0 auto;
     float: left;
     margin-bottom: 30px;
-    width: 290px;
+    width: 300px;
   }
   #picture .image {
-    width: 290px;
-    border-radius: 15px 15px 0px 0px;
+    width: 300px;
   }
   #picture .info {
-    width: 290px;
+    width: 300px;
     height: 70px;
   }
   #picture .share {
-    /* top: 15px; */
+    top: 15px;
     background-image: url('../img/share.png');
     width: 60px;
     height: 60px;
@@ -97,6 +258,10 @@
   }
   #picture .info p {
     float: left;
-    width: 215px;
   }
+}
+
+/* generic xhdpi */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+}
 }
