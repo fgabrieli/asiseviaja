@@ -62,7 +62,7 @@
 /* galaxy s2 hdpi */
 @media screen and (device-width: 480px) and (device-height: 800px) {
   #picture {
-    padding: 160px 20px 0px 20px;
+    padding: 170px 20px 0px 20px;
     height: 100%;
     width: 100%;
   }
@@ -160,7 +160,7 @@
   #picture .share {
     top: 15px;
     background-image: url('../img/share.png');
-    width: 113px;
+    width: 60px;
     height: 60px;
     background-position: center center;
     top: 10px;
@@ -273,7 +273,7 @@ galaxy s3, hdpi
   #picture .img-container {
     /* margin-bottom: 15px; */
     /* position: relative; */
-    /* margin: 0 auto; */
+    margin: 0 auto;
     /* float: left; */
     padding-bottom: 15px;
     /* margin-bottom: 30px; */

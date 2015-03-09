@@ -101,10 +101,11 @@ galaxy s3 hdpi
     padding-top: 1vh;
     background-image: url('../img/logo-540x960.png');
     background-size: 540px;
-    border: 1px solid #003366;
-    height: 130px;
+    /* border: 1px solid #003366; */
+    height: 260px;
     background-position: center 1vh;
     width: 540px;
+    background-size: 100%;
     background-repeat: no-repeat;
     top: 9px;
     /* background-color: white; */
@@ -148,10 +149,10 @@ galaxy s2, hdpi
     position: absolute;
     float: left;
     padding-top: 1vh;
-    background-image: url('../img/logo-540x960.png');
+    background-image: url('../img/logo-480x800.png');
     background-size: 540px;
     border: 1px solid #003366;
-    height: 130px;
+    height: 150px;
     background-position: center 1vh;
     width: 480px;
     background-repeat: no-repeat;
