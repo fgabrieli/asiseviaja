@@ -70,7 +70,7 @@ samsung galaxy s3, xhdpi
   #topmenu .logo {
     position: relative;
     float: left;
-    border: 1px solid #003366;
+    /*border: 1px solid #003366;*/
     height: 130px;
     width: 360px;
     padding-top: 1vh;
