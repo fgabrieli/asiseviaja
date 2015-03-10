@@ -41,9 +41,9 @@
   }
   #picture .share {
     top: 15px;
-    background-image: url('../img/share.png');
-    width: 40px;
-    height: 40px;
+    background-image: url('../img/share-120x120.png');
+    width: 60px;
+    height: 60px;
     top: 10px;
     margin: 0 auto;
     margin-top: 5px;
@@ -103,10 +103,11 @@
   }
   #picture .share {
     top: 15px;
-    background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
+    background-image: url('../img/share-120x120.png');
+    width: 90px;
+    height: 90px;
     top: 10px;
+    background-size: 100%;
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -159,14 +160,14 @@
   }
   #picture .share {
     top: 15px;
-    background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
-    background-position: center center;
+    background-image: url('../img/share-120x120.png');
+    width: 120px;
+    height: 100px;
+    /* background-position: center center; */
     top: 10px;
     background-size: 100%;
     margin: 0 auto;
-    margin-top: 7px;
+    /* margin-top: 7px; */
     margin-bottom: 5px;
     background-repeat: no-repeat;
   }
@@ -227,24 +228,26 @@ galaxy s3, hdpi
   }
   #picture .share {
     top: 15px;
-    background-image: url('../img/share.png');
-    width: 60px;
-    height: 60px;
-    left: 86%;
+    background-image: url('../img/share-120x120.png');
+    width: 90px;
+    height: 90px;
+    /* left: 86%; */
+    background-size: 100%;
     margin: 0 auto;
     margin-top: 10px;
     background-repeat: no-repeat;
   }
   #picture .info p {
-    float: left;
-    left: 10px;
+    /* float: left; */
+    /* left: 10px; */
     white-space: nowrap;
     left: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 15px;
-    padding: 10px;
-    top: 3px;
-    position: relative;
+    padding-top: 5px;
+    /* padding: 10px; */
+    /* top: 3px; */
+    /* position: relative; */
   }
 }
 
@@ -294,9 +297,9 @@ galaxy s3, hdpi
   }
   #picture .share {
     /* top: 15px; */
-    background-image: url('../img/share.png');
-    width: 90px;
-    height: 90px;
+    background-image: url('../img/share-120x120.png');
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
     background-size: 100%;
     /* top: 10px; */
