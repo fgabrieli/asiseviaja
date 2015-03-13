@@ -161,13 +161,13 @@
   #picture .share {
     top: 15px;
     background-image: url('../img/share-120x120.png');
-    width: 120px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     /* background-position: center center; */
     top: 10px;
     background-size: 100%;
     margin: 0 auto;
-    /* margin-top: 7px; */
+    margin-top: 5px;
     margin-bottom: 5px;
     background-repeat: no-repeat;
   }

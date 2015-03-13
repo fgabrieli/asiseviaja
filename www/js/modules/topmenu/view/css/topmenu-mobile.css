@@ -5,13 +5,9 @@ samsung galaxy s4, xhdpi
 samsung galaxy s3, xhdpi
 */
 @media screen and (device-width: 720px) and (device-height: 1280px) {
-  #topmenu {
-    position: fixed;
-  }
   #topmenu .logo {
     position: relative;
     float: left;
-    border: 1px solid #003366;
     height: 180px;
     width: 720px;
     padding-top: 1vh;
@@ -32,13 +28,9 @@ samsung galaxy s3, xhdpi
 
 /* samsung galaxy s4, xxhdpi */
 @media screen and (device-width: 1080px) and (device-height: 1920px) {
-  #topmenu {
-    position: fixed;
-  }
   #topmenu .logo {
     position: relative;
     float: left;
-    /* border: 1px solid #003366; */
     height: 260px;
     width: 1080px;
     /* padding-top: 1vh; */
@@ -55,22 +47,17 @@ samsung galaxy s3, xhdpi
   #topmenu .bg-header {
     background-image: url('../img/bg-header.png');
     /* height: 2vh; */
-  
     margin: 0px;
     padding: 0px;
     height: 20px;
-}
+  }
 }
 
 /* samsung galaxy s4 mini, mdpi */
 @media screen and (device-width: 360px) and (device-height: 640px) {
-  #topmenu {
-    position: fixed;
-  }
   #topmenu .logo {
     position: relative;
     float: left;
-    /*border: 1px solid #003366;*/
     height: 130px;
     width: 360px;
     padding-top: 1vh;
@@ -91,17 +78,12 @@ galaxy s4 mini, hdpi
 galaxy s3 hdpi
 */
 @media screen and (device-width: 540px) and (device-height: 960px) {
-  #topmenu {
-    position: fixed;
-    z-index: 100;
-  }
   #topmenu .logo {
     position: absolute;
     float: left;
     padding-top: 1vh;
     background-image: url('../img/logo-540x960.png');
     background-size: 540px;
-    /* border: 1px solid #003366; */
     height: 260px;
     background-position: center 1vh;
     width: 540px;
@@ -117,17 +99,12 @@ galaxy s2, mdpi
 */
 @media screen and (device-width: 320px) and (device-height: 534px) , screen and (device-width: 320px) and
   (device-height: 536px) {
-  #topmenu {
-    position: fixed;
-    z-index: 100;
-  }
   #topmenu .logo {
     position: absolute;
     float: left;
     padding-top: 1vh;
     background-image: url('../img/logo-320x534.png');
     background-size: 320px;
-    border: 1px solid #003366;
     height: 130px;
     background-position: center 1vh;
     width: 320px;
@@ -141,22 +118,12 @@ galaxy s2, mdpi
 galaxy s2, hdpi
 */
 @media screen and (device-width: 480px) and (device-height: 800px) {
-  #topmenu {
-    position: fixed;
-    z-index: 100;
-  }
   #topmenu .logo {
     position: absolute;
-    float: left;
-    padding-top: 1vh;
     background-image: url('../img/logo-480x800.png');
-    background-size: 540px;
-    border: 1px solid #003366;
-    height: 150px;
-    background-position: center 1vh;
     width: 480px;
+    margin-top: 4px;
+    height: 150px;
     background-repeat: no-repeat;
-    top: 8px;
-    /* background-color: white; */
   }
 }

@@ -5,6 +5,7 @@
   }
   #picture .img-container {
     display: table;
+    float: none !important;
   }
   #picture .image {
     display: table-row;
