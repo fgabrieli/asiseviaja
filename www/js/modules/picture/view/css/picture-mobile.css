@@ -125,11 +125,16 @@
 @media screen and (device-width: 360px) and (device-height: 640px) {
   #picture {
     padding: 150px 20px 0px 20px;
-  }
+  
+    position: relative;
+    z-index: 1;
+}
   #picture .pictures {
-    width: 300px;
+    /*width: 300px;*/
     height: 100%;
-  }
+  
+    position: relative;
+}
   #picture #btn-shot {
     position: fixed;
     background-repeat: no-repeat;
