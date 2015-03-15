@@ -11,6 +11,8 @@ $hasBoundaries = isset($_GET['start']) && isset($_GET['end']);
 if ($hasBoundaries) {
   $start = intval($_GET['start']);
   $end = intval($_GET['end']);
+  
+  $howMany = $end - $start;
 
   try {
 
@@ -27,9 +29,9 @@ if ($hasBoundaries) {
 
     $stmt = $db->prepare('SELECT fileName, caption, 
         DATE_FORMAT(created, "%d-%m%-%Y %H:%i") as date 
-        FROM pictures ORDER BY created DESC LIMIT :start, :end');
+        FROM pictures ORDER BY created DESC LIMIT :start, :howMany');
     $stmt->bindParam(':start', $start, PDO::PARAM_INT);
-    $stmt->bindParam(':end', $end, PDO::PARAM_INT);
+    $stmt->bindParam(':howMany', $howMany, PDO::PARAM_INT);
     $stmt->execute();
     $pictures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
