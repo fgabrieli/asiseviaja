@@ -18,6 +18,13 @@ hdpi = mdpi * 1.5 = 480 x 720
 xxhdpi = mdpi * 3
 xxxhdpi = mdpi * 4
 
+ldpi = 0.00625 * 120 -> 0.75
+mdpi = 0.00625 * 160 -> 1.0
+hdpi = 0.00625 * 240 -> 1.5
+xhdpi = 0.00625 * 320 -> 2.0
+xxhdpi = 0.00625 * 480 -> 3.0
+xxxhdpi = 0.00625 * 640 -> 4.0
+
 /*
 xlarge screens are at least 960dp x 720dp (xhdpi)
 large screens are at least 640dp x 480dp (hdpi)

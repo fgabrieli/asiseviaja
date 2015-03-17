@@ -1,0 +1,19 @@
+
+<!-- List of pictures -->
+<div class="pictures mobile" data-ng-controller="asi.Picture.ngController">
+  <div data-ng-repeat="picture in pictures" class="img-container">
+    <img src="{{picture.url}}" class="image" />
+
+    <div class="info">
+
+      <div class="buttons">
+        <div class="share" data-ng-click="share(picture)" alt="Compartir Foto" title="Compartir Foto"></div>
+
+        <div class="report" data-ng-click="report(picture)" alt="Denunciar" title="Denunciar"></div>
+      </div>
+
+      <p class="date">Foto tomada el {{picture.date}} hs.</p>
+
+    </div>
+  </div>
+</div>

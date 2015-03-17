@@ -1,0 +1,84 @@
+/* base styles */
+#topmenu {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+#topmenu .bg-header {
+  background-image: url('../img/bg-header.png');
+  margin: 0px;
+  padding: 0px;
+  width: inherit;
+  height: 2vw;
+}
+
+#topmenu .logo {
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: inherit;
+  height: 37vw;
+  margin-top: 5px;
+}
+
+/**
+ * device specific styles, override base styles
+ */
+
+/* 
+galaxy s4 mini, hdpi
+galaxy s3 hdpi
+*/
+@media screen and (device-width: 540px) and (device-height: 960px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-540x960.png');
+  }
+}
+
+/* 
+galaxy s4 mini, mdpi 
+*/
+@media screen and (device-width: 360px) and (device-height: 640px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-360x640.png');
+  }
+}
+
+/* 
+galaxy s4, xhdpi 
+galaxy s3, xhdpi
+*/
+@media screen and (device-width: 720px) and (device-height: 1280px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-720x1280.png');
+  }
+}
+
+/* 
+galaxy s4, xxhdpi 
+*/
+@media screen and (device-width: 1080px) and (device-height: 1920px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-720x1280.png');
+  }
+}
+
+/* 
+galaxy s2, mdpi
+*/
+@media screen and (device-width: 320px) and (device-height: 534px) , screen and (device-width: 320px) and
+  (device-height: 536px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-320x534.png');
+  }
+}
+
+/* 
+galaxy s2, hdpi
+*/
+@media screen and (device-width: 480px) and (device-height: 800px) {
+  #topmenu .logo {
+    background-image: url('../img/logo-480x800.png');
+  }
+}
